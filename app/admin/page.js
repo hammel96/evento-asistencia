@@ -549,7 +549,8 @@ export default function AdminDashboard() {
   const [showPersonaModal, setShowPersonaModal] = useState(false);
   const [currentView, setCurrentView] = useState('dashboard');
   const [searchTerm, setSearchTerm] = useState('');
-  
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const [eventoForm, setEventoForm] = useState({ nombre: '', fecha: '' });
   const [personaForm, setPersonaForm] = useState({
     codigo_empleado: '',
@@ -716,18 +717,49 @@ async function generarQRTodos() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex">
-      <aside className="w-64 bg-[#004370] text-white flex-shrink-0">
-        <div className="p-6">
-          <img src="/iconlogo2.svg" alt="Icon BPO" width={48} height={48} className="mx-auto mb-4" />
-          <h2 className="text-center font-bold text-lg">Sistema de Asistencia</h2>
+      {/* Overlay móvil */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      {/* Botón hamburguesa (solo móvil) */}
+      <button
+        onClick={() => setSidebarOpen(true)}
+        className={`fixed top-4 left-4 z-50 lg:hidden bg-[#004370] text-white p-2 rounded-lg shadow-lg transition-opacity duration-200 ${sidebarOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+        aria-label="Abrir menú"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <aside className={`fixed inset-y-0 left-0 z-40 w-64 bg-[#004370] text-white flex-shrink-0 transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className="p-6 flex items-center justify-between">
+          <div className="flex-1 flex flex-col items-center">
+            <img src="/iconlogo2.svg" alt="Icon BPO" width={48} height={48} className="mb-4" />
+            <h2 className="text-center font-bold text-lg">Sistema de Asistencia</h2>
+          </div>
+          {/* Botón cerrar (solo móvil) */}
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="lg:hidden text-white hover:text-gray-300 self-start"
+            aria-label="Cerrar menú"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-        
+
         <nav className="mt-8">
           <button
-            onClick={() => setCurrentView('dashboard')}
+            onClick={() => { setCurrentView('dashboard'); setSidebarOpen(false); }}
             className={`w-full px-6 py-3 flex items-center gap-3 transition-colors ${
-              currentView === 'dashboard' 
-                ? 'bg-[#4997d0] border-l-4 border-[#d8222d]' 
+              currentView === 'dashboard'
+                ? 'bg-[#4997d0] border-l-4 border-[#d8222d]'
                 : 'hover:bg-[#4997d0] hover:bg-opacity-20'
             }`}
           >
@@ -736,12 +768,12 @@ async function generarQRTodos() {
             </svg>
             Dashboard
           </button>
-          
+
           <button
-            onClick={() => setCurrentView('registro')}
+            onClick={() => { setCurrentView('registro'); setSidebarOpen(false); }}
             className={`w-full px-6 py-3 flex items-center gap-3 transition-colors ${
-              currentView === 'registro' 
-                ? 'bg-[#4997d0] border-l-4 border-[#d8222d]' 
+              currentView === 'registro'
+                ? 'bg-[#4997d0] border-l-4 border-[#d8222d]'
                 : 'hover:bg-[#4997d0] hover:bg-opacity-20'
             }`}
           >
