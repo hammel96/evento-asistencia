@@ -1,0 +1,623 @@
+id,codigo_empleado,nombres,apellidos,correo_electronico,qr_code,activo,department,manager,hiring_date
+1,16,KEVIN MOISES,CASTELLANOS GARCIA,keving@alleviatefinancial.com,16,true,Manager,GERSON HERNANDEZ,2018-10-03
+2,25,LUIS PEDRO,CASTELLANOS PORRAS,luisc@iconbpo.com,25,true,Icon Administration Department,GERSON HERNANDEZ,2019-01-09
+3,31,JOSE ALEJANDRO,BENEGAS GARCIA,joseb@alleviatefinancial.com,31,true,Manager,GERSON HERNANDEZ,2019-04-01
+4,50,"ANA LUCIA ",BARRIOS LOPEZ,analul@alleviate.com,50,true,Correspondence,CHRISTIAN ARCHILA,2020-01-22
+5,52,WALFRED ANIBAL,BARRIOS LOPEZ,walfredl@alleviatefinancial.com,52,true,Nego Data Analyst,MARTIN ZEA,2020-03-16
+6,56,ESTEPHANIE LORENA,PEREZ PALENCIA,estefany@alleviatefinancial.com,56,true,Conv Negotiator 30MIN,KATHERINE PAMELLA SAGASTUME ZELAYA,2020-04-16
+7,70,VERONICA ISABEL,QUINONEZ MENDEZ,veronicam@alleviatefinancial.com,70,true,Team Lead,JOSE BENEGAS,2020-06-09
+8,85,DULCE MARIA DE LOS ANGELES,RABANALES,dulcer@alleviatefinancial.com,85,true,PPD Agent,EDWING RENE ROSALES QUINTO,2020-10-01
+9,93,ELIZABETH RENNEE,JOHNSON RODAS,lizj@guardianlit.com,93,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2020-11-03
+10,95,GABRIEL ESTUARDO,ORELLANA RAMIREZ,gabrielo@alleviatefinancial.com,95,true,Bulk Negotiator,LINDSLEY ROMAN,2020-12-14
+11,98,JONATAN ALBERTO,RODRIGUEZ SANCHEZ,jonathanr@alleviatefinancial.com,98,true,Bulk Negotiator,LINDSLEY ROMAN,2021-01-06
+12,104,HECTOR ALEJANDRO,MELENDEZ MELENDEZ,hectorm@iconbpo.com,104,true,Icon Social Media Specialist,OSWALD AQUINO,2021-02-03
+13,108,Ana Cristina Jeanneth,Barillas Rodas,anrodas@alleviatefinancial.com,108,true,PPD Agent,EDWING RENE ROSALES QUINTO,2024-09-03
+14,109,CRISTIAN ALDAIR,MELENDEZ MELENDEZ,cristianm@alleviatefinancial.com,109,true,PPD Agent,EDWING RENE ROSALES QUINTO,2021-03-01
+15,123,DIEGO ALEJANDRO,ECHEVERRIA REBULLA,diegoe@alleviatefinancial.com,123,true,Facilitator,MARTIN ZEA,2021-04-16
+16,134,LIGIA ELENA,CUEVAS,ligiac@guardianlit.com,134,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2021-06-02
+17,136,MONICA XIMENA,LEMUS DE LEON,monical@alleviatefinancial.com,136,true,PPD Agent,KEVIN GARCIA,2021-06-09
+18,145,ANA SOFIA,VARGAS RABANALES,Srabanales@alleviatefinancial.com,145,true,PPD Agent,KEVIN GARCIA,2021-07-07
+19,150,DANIEL ORLANDO,COBON FERNANDEZ,danielc@alleviatefinancial.com,150,true,PPD Agent,KEVIN GARCIA,2021-07-22
+20,161,MABBIE HETZIBETH,VILLATORO AVILA,mabbiev@guardianlit.com,161,true,GLG Non Lega CA,CARLOS FEDERICO MORA AGUILAR,2021-08-25
+21,164,DIEGO GABRIEL,ESTRADA ORELLANA,diegoe@guardianlit.com,164,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2022-08-22
+22,166,ALLISON ARLETTE,FLORES ARGUETA,aflores@tplend.com,166,true,Manager,GERSON HERNANDEZ,2021-09-16
+23,172,MARYNES,MARTINEZ NUNEZ,mmartinez@alleviatefinancial.com,172,true,Manager,GERSON HERNANDEZ,2021-09-27
+24,174,Flor de Maria,Valenzuela Yac,florv@guardianlit.com,174,true,Encore Correspondence 30MIN,URIEL AUDELINO DE LEON FONSECA,2025-02-03
+25,175,YOZER ALFREDO,MANZO,Yozerm@alleviatefinancial.com,175,true,PPD Agent,EDWING RENE ROSALES QUINTO,2021-10-04
+26,188,LUISA FERNANDA,LOPEZ TORINO,luisal@guardianlit.com,188,true,Equinox Negotiations,LUIS CASTELLANOS,2021-10-18
+27,198,WILLY HUMBERTO,SAQUIC GONZALEZ,willys@alleviatefinancial.com,198,true,Bulk Negotiator,LINDSLEY ROMAN,2021-11-02
+28,206,ANA CHRISTINA,APARICIO FLORES,anaa@iconbpo.com,206,true,Icon Voice and Accent Analyst,OSWALD AQUINO,2021-11-15
+29,211,EMERSSON KENY,DE LEON PEREZ,Emerk@alleviatefinancial.com,211,true,Account Manager 1HR,KENNETH PINEDA,2021-11-29
+30,218,SERGIO ANDERSON,SINAY DEL CID,Sergios@tplend.com,218,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2021-11-22
+31,222,LUIS EDUARDO,AZPURU GAITAN,Lazpuru@tplend.com,222,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2021-11-22
+32,223,MARCOS FERNANDO,GALINDO GOMEZ,mgalindo@alleviatefinancial.com,223,true,Data Analyst,GERSON HERNANDEZ,2021-12-10
+33,230,ESPERANZA CARIDAD,GALICIA PICO,caridadg@guardianlit.com,230,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2021-12-20
+34,236,DIANA YESENIA,GUEVARA AVILA,dguevara@tplend.com,236,true,Team Lead,ALLISON ARLETTE FLORES ARGUETA,2021-12-17
+35,241,ANGELINA STHEFANIA ALEJANDRA,LOPEZ MOLINA,sthefanial@iconbpo.com,241,true,Icon Recruitment,OSWALD AQUINO,2022-01-03
+36,243,Kerem Paulina Celeste,Santizo Castillo,kceleste@alleviatefinancial.com,243,true,Account Manager 1HR,CHRISTIAN ARCHILA,2025-05-05
+37,246,JUAN MIGUEL,GARCIA PALMA,juang@guardianlit.com,246,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2022-08-22
+38,252,CLAUDIA ARIENNE,SANDOVAL VILLATORO,csandoval@alleviatefinancial.com,252,true,Assistant Manager,MARTIN ZEA,2022-01-10
+39,265,KENNETH ARAMIS,PINEDA RODRIGUEZ,kpineda@alleviatefinancial.com,265,true,Team Lead,MARYNES MARTINEZ NUNEZ,2022-01-24
+40,269,JOSSELINE PAMELA,PEREZ GIRON,jperez@alleviatefinancial.com,269,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2022-01-24
+41,274,MEYLIN YANIRA,PALOMO BARRIENTOS,meylinp@guardianlit.com,274,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2022-01-24
+42,278,ANDREA PAOLA,ENRIQUEZ,aenriquez@alleviatefinancial.com,278,true,Account Manager 1HR,CHRISTIAN ARCHILA,2022-01-24
+43,288,LILIAN IVETTE,SINAY DEL CID,lsinay@tplend.com,288,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2022-01-24
+44,295,VILMA ALEJANDRA,SINAY DONADO,vilmas@guardianlit.com,295,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-01-24
+45,308,CRISTA IXMUCANE,DE LEON SUN,cdeleon@alleviatefinancial.com,308,true,Finance Processor,CLAUDIA ARIENNE SANDOVAL VILLATORO,2022-02-08
+46,331,RODRIGO ANDREE,RAMIREZ VELASCO,rramirez@alleviatefinancial.com,331,true,Jr Negotiator,MARTIN ZEA,2022-03-07
+47,353,ZULEMA YASMIN,FRANCO ALVAREZ,zalvarez@tplend.com,353,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2022-03-28
+48,355,OSLER JOEL,ALVARADO DE LEON,joela@guardianlit.com,355,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-04-20
+49,356,SASHA PAOLA,VALDEZ ARENAS,sashav@guardianlit.com,356,true,QA Encore Account Manager,LUISA FERNANDA LOPEZ TORINO,2022-04-20
+50,357,MONICA GABRIELA,FUENTES RAMOS,mfuentes@alleviatefinancial.com,357,true,Assistant Manager,GERSON HERNANDEZ,2022-04-20
+51,375,VIDAL MARCIO LISANDRO,GOMEZ,vgomez@alleviatefinancial.com,375,true,Account Manager 1HR,KENNETH PINEDA,2022-04-25
+52,376,ROSAMELIA,VASQUEZ GARCIA,rosameliav@guardianlit.com,376,true,QA Encore Account Manager,LUISA FERNANDA LOPEZ TORINO,2022-04-25
+53,387,"Juan Francisco ",Martinez Izaguirre,juanm@guardianlit.com,387,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+54,389,NESTOR JAVIER,AGUILAR REVOLORIO,nestora@guardianlit.com,389,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2022-08-22
+55,394,Mauricio Ernesto,Corado Luna,mauricioc@guardianlit.com,394,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+56,400,ANGEL JACOBO,GODOY MARTINEZ,agodoy@alleviatefinancial.com,400,true,Finance Sales,CLAUDIA ARIENNE SANDOVAL VILLATORO,2022-06-06
+57,402,Dora Eugenia,Flores Santizo,doraf@guardianlit.com,402,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-03-03
+58,403,SOFIA LILY,RAMIREZ FERNANDEZ,sofiar@guardianlit.com,403,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-06-13
+59,404,PAULO VLADIMIR,HERNANDEZ HERNANDEZ,phernandez@alleviatefinancial.com,404,true,Final Enrollment Agent,JOSE BENEGAS,2022-06-13
+60,405,SILVIA VERONICA,SANCHEZ RUBIO,silvias@guardianlit.com,405,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-06-13
+61,406,ALEJANDRA BEATRIZ,LOPEZ PAIZ,alejandral@guardianlit.com,406,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-06-13
+62,411,Hector Ivan,Hernandez Calderon,hectorh@guardianlit.com,411,true,GLG Sales,LUISA FERNANDA LOPEZ TORINO,2024-03-19
+63,422,JEACKELINNE MISHELL,PIVARAL AGUILAR,jeackelinnep@guardianlit.com,422,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-06-21
+64,427,GERSON ALEXANDER,HERNANDEZ,ghernandez@alleviatefinancial.com,427,true,Icon Administration Department,LUIS CASTELLANOS,2022-06-21
+65,429,NANCY CRISTINA,PEDROZA LOPEZ,nancyp@guardianlit.com,429,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-06-27
+66,430,MARDOQUEO,XICAY SALOMON,mardoqueox@guardianlit.com,430,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-06-27
+67,433,HILDA EUGENIA,CASTELLANOS BATRES,hildac@guardianlit.com,433,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-06-27
+68,441,CARLOS FEDERICO,MORA AGUILAR,carlosm@guardianlit.com,441,true,GLG Negotiations,LUIS CASTELLANOS,2022-07-05
+69,443,BILDA GEORGINA,SOSA ROSALES,bildas@guardianlit.com,443,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-07-12
+70,447,EDWIN OBDULIO,MUY VASQUEZ,emuy@alleviatefinancial.com,447,true,PPD Agent,KEVIN GARCIA,2022-07-18
+71,449,MARIA MARTHA OCTAVIA,SOBALVARRO WOODS,msobalvarro@tplend.com,449,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2023-01-16
+72,459,KLARISSA MICHELLE,MARTINEZ SANTANDREA,kmartinez@alleviatefinancial.com,459,true,Account Manager 1HR,ASTRID FIGUEROA,2022-08-01
+73,462,OSWALD,GARCIA AQUINO,oswalda@iconbpo.com,462,true,Icon Human Resources,OSWALD AQUINO,2022-08-01
+74,466,JENIFFER SKARLET,VARGAS RIVERA,jvargas@alleviatefinancial.com,466,true,Final Enrollment Agent,JOSE BENEGAS,2022-08-08
+75,467,ELBA MARIA,RIVERA MATA,erivera@alleviatefinancial.com,467,true,Final Enrollment Agent,JOSE BENEGAS,2022-08-08
+76,474,JORGE FERNANDO,YONG GARCIA,jyong@alleviatefinancial.com,474,true,Team Lead,JOSEMANUEL SALAZAR ACUNA,2024-11-18
+77,483,ERICK ESTUARDO,DE LA CRUZ LOPEZ,erickc@guardianlit.com,483,true,Encore Analyst and Engineer Department,LUIS CASTELLANOS,2022-08-29
+78,486,LUIS ANTONIO,CARRANZA LOPEZ,lcarranza@alleviatefinancial.com,486,true,PPD Agent,KEVIN GARCIA,2022-09-07
+79,488,JUNIOR CARLOS HUMBERTO,VIDES FLORES,juniorf@guardianlit.com,488,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-09-08
+80,492,Elmer Emilio,Ramirez Aviles,elmerr@guardianlit.com,492,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-09-22
+81,501,Alejandra Marleni,Figueroa Catalan,acatalan@alleviatefinancial.com,501,true,Final Enrollment Agent,VERONICA QUINONEZ,2022-09-26
+82,502,Esteban Adolfo,Xol Moreno,emoreno@alleviatefinancial.com,502,true,Sales Admin,GERSON HERNANDEZ,2022-09-26
+83,504,Monica Alejandra,Mancilla Chavez,mchavez@alleviatefinancial.com,504,true,Final Enrollment Agent,VERONICA QUINONEZ,2022-09-26
+84,507,Jose Mario,Najera Duarte,joduarte@alleviatefinancial.com,507,true,Account Manager 1HR,ASTRID FIGUEROA,2022-09-26
+85,515,Luis Ervin,Cocon Catuc,lcatuc@alleviatefinancial.com,515,true,Account Manager 1HR,ASTRID FIGUEROA,2022-09-26
+86,523,Arling Dulce Maria,Alvarez,arlinga@guardianlit.com,523,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-09-29
+87,524,Zoila Lourdes Mayte,Galvez Barrios,zoilag@guardianlit.com,524,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-10-03
+88,525,Sofia Fernanda,Cifuentes Rueda,sofiac@guardianlit.com,525,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2022-10-03
+89,527,"Daniela ","Paz Franco ",danielap@guardianlit.com,527,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-10-03
+90,531,Pablo Andre,Melendez Melendez,pmelendez@alleviatefinancial.com,531,true,PPD Agent,KEVIN GARCIA,2022-03-10
+91,540,Wualfre Fernando,Guzman de Leon,wdeleon@alleviatefinancial.com,540,true,PPD Agent,EDWING RENE ROSALES QUINTO,2022-10-05
+92,542,Jose Luis,Pojoy Vega,jpojoy@alleviatefinancial.com,542,true,Finance Sales,CLAUDIA ARIENNE SANDOVAL VILLATORO,2023-01-09
+93,543,Astrid Del Rosario,Figueroa Romero,aromero@alleviatefinancial.com,543,true,Team Lead,JOSEMANUEL SALAZAR ACUNA,2022-10-06
+94,545,Leslie Roxana,Letona Carrera,lcarrera@alleviatefinancial.com,545,true,QCC Analyst,GERSON HERNANDEZ,2022-10-17
+95,547,Astrid Melissa,Flores,astridf@guardianlit.com,547,true,QA Encore Account Manager,LUISA FERNANDA LOPEZ TORINO,2022-10-20
+96,551,Fernando Antonio,Cuevas Portales,fernandoc@guardianlit.com,551,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2022-10-27
+97,568,"Leyla ",Garcia Duenas,leylag@guardianlit.com,568,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+98,570,Lister Eduardo,Aragon Ambrosy,listera@guardianlit.com,570,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-10-27
+99,572,Alvaro Carlos,"Orantes Ambrosy ",alvaroo@guardianlit.com,572,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-10-27
+100,573,Chrystian Oswaldo,Urizar Petesdorf,chrystianu@guardianlit.com,573,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-10-27
+101,574,Jean Carlos,Rosales Beteta,jeanr@guardianlit.com,574,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2022-10-27
+102,576,Luis Daniel,Say Flores,luiss@guardianlit.com,576,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2022-10-27
+103,577,Jorge Mario,Linares Enriquez,jorgel@guardianlit.com,577,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-10-27
+104,578,Uriel Audelino,De Leon Fonseca,urield@guardianlit.com,578,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2022-10-27
+105,579,Maria Alejandra,Aguilar Maselli,mariaa@guardianlit.com,579,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2022-10-27
+106,581,Edgar Rodrigo,Acabal Quiej,edgara@guardianlit.com,581,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2022-10-27
+107,593,"Ricardo Antonio ",Duran Lemus,aduran@alleviatefinancial.com,593,true,Data Analyst,GERSON HERNANDEZ,2022-10-31
+108,595,Heidi Vanesa,Pocon Contreras,hpocon@alleviatefinancial.com,595,true,Jr Negotiator,MARTIN ZEA,2022-02-11
+109,596,Alvaro Rodrigo,Sierra Giron,alvaros@guardianlit.com,596,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-11-03
+110,597,"Julio Cesar ",Salazar Garcia,jsalazar@tplend.com,597,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2023-06-12
+111,602,Edgar Steven,Hernandez Galicia,edgarh@guardianlit.com,602,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2022-11-03
+112,611,PEDRO DANIEL,ESPANA LOPEZ,daniele@guardianlit.com,611,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2022-11-14
+113,617,Estefania,Rivera Medina,emedina@alleviatefinancial.com,617,true,PPD Team Captain,KEVIN GARCIA,2022-11-14
+114,619,Luisa Maria,Pizzati Lopez,luisap@guardianlit.com,619,true,QA Encore Account Manager,LUISA FERNANDA LOPEZ TORINO,2022-11-17
+115,625,Norma Lissette,Godoy Solis,normag@guardianlit.com,625,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-02-05
+116,626,JOSE DAVID,"GARCIA SANTOS ",jsantos@alleviatefinancial.com,626,true,Account Manager 1HR,CHRISTIAN ARCHILA,2022-11-21
+117,629,ANGEL EDUARDO,PALACIOS MONZON,apalacios@alleviatefinancial.com,629,true,PPD Agent,EDWING RENE ROSALES QUINTO,2022-11-21
+118,630,GABRIELA ELUVIA,MARTINEZ CORADO,gmartinez@alleviatefinancial.com,630,true,PPD Agent,EDWING RENE ROSALES QUINTO,2022-11-21
+119,631,MANFREDO SAMUEL,MATIAS RAMIREZ,mmatias@alleviatefinancial.com,631,true,PPD Agent,EDWING RENE ROSALES QUINTO,2022-11-21
+120,632,VANESSA ANDREA,MAQUIZ MENENDEZ,vanessam@guardianlit.com,632,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2022-11-21
+121,633,RENE ALEJANDRO,VILLEGAS CARRANZA,renev@guardianlit.com,633,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-11-21
+122,634,MARLON IVAN,PORRES UMANZOR,marlonp@guardianlit.com,634,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-11-21
+123,635,JUAN MIGUEL,TELLO OVANDO,juant@guardianlit.com,635,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2022-11-21
+124,645,Edjarke David,Meza Estevez,edjarkem@guardianlit.com,645,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-12-08
+125,647,Jeysel Rafael,De Leon Xiloj,jeyseld@guardianlit.com,647,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-12-08
+126,648,Erika Julissa,Sanchinelli Gomez,erikas@guardianlit.com,648,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-12-08
+127,650,Jonathan Gustavo,Pop Velasquez,jpop@alleviatefinancial.com,650,true,Team Lead,JOSEMANUEL SALAZAR ACUNA,2022-12-12
+128,651,Carlos Enrique,Ordonez Gonzalez,cordonez@tplend.com,651,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2023-01-16
+129,653,Christian Antonio,Archila Miranda,carchila@alleviatefinancial.com,653,true,Team Lead,MARYNES MARTINEZ NUNEZ,2022-12-12
+130,660,Kelvin Augusto,Ramos Sagastume,kramos@alleviatefinancial.com,660,true,Conv Negotiator,KATHERINE PAMELLA SAGASTUME ZELAYA,2022-12-12
+131,663,Alexis Daniel,Machuca Castillo,amachuca@alleviatefinancial.com,663,true,Nego Data Analyst,MARTIN ZEA,2022-12-12
+132,670,Crista Mariela,Martinez Corado,cristam@guardianlit.com,670,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2022-12-15
+133,672,Eldon Samuel,Lorenz Garcia,elorenz@alleviatefinancial.com,672,true,PPD Agent,EDWING RENE ROSALES QUINTO,2022-12-19
+134,678,Steven Oswald,Chavez Lopez,schavez@alleviatefinancial.com,678,true,PPD Agent,KEVIN GARCIA,2023-01-03
+135,682,Miguel Angel,Gonzalez Peralta,miguelg@guardianlit.com,682,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-12-12
+136,684,Khristian Manolo Junior,Garcia Pineda,Khristiang@alleviatefinancial.com,684,true,BI Analyst,LUIS DIEGO ZEA VALDEZ,2023-01-03
+137,686,Gabriela Michelle,Alvarado Castro,galvarado@alleviatefinancial.com,686,true,QCC Analyst,GERSON HERNANDEZ,2023-01-09
+138,692,Yeison Carlos,"Barrios  Aguilar ",yeisonb@guardianlit.com,692,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+139,716,"Carlos Raul ",Paiz Cobian,carlosp@guardianlit.com,716,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2023-01-31
+140,732,Edvin Rolando,Santiago Barrera,edvins@guardianlit.com,732,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-03-01
+141,733,Nancy Fernanda,Mansilla Pedroza,nancym@guardianlit.com,733,true,GLG Negotiations QA,CARLOS FEDERICO MORA AGUILAR,2023-03-01
+142,735,Cristina Izabel,Chacon Herrera,cchacon@alleviatefinancial.com,735,true,Conv Negotiator,KATHERINE PAMELLA SAGASTUME ZELAYA,2023-03-06
+143,737,Jaqueline Alexandra,Alonzo Lopez De Mateo,jalonzo@alleviatefinancial.com,737,true,Account Manager 1HR,ASTRID FIGUEROA,2023-03-13
+144,741,Alvaro Israel,Lemus Castillo,alemus@alleviatefinancial.com,741,true,Account Manager 1HR,KENNETH PINEDA,2023-03-13
+145,743,Wilson Miguel,Berganza Santizo,wberganza@alleviatefinancial.com,743,true,Account Manager 1HR,CHRISTIAN ARCHILA,2023-03-13
+146,744,Josemanuel,Salazar Acuna,jsalazar@alleviatefinancial.com,744,true,Manager,GERSON HERNANDEZ,2023-03-13
+147,755,Jorge Salvador,Arroyo Mata,jarroyo@alleviatefinancial.com,755,true,Account Manager 1HR,KENNETH PINEDA,2023-03-13
+148,758,Daniel Alexander,Lopez Hernandez,dlopez@alleviatefinancial.com,758,true,Finance Processor,CLAUDIA ARIENNE SANDOVAL VILLATORO,2023-03-13
+149,765,Carmen Lucia,Barreno Samayoa,cbarreno@alleviatefinancial.com,765,true,PPD Team Captain,KEVIN GARCIA,2023-04-03
+150,768,Marlen Giannina,Castellanos Pineda,marlenc@guardianlit.com,768,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2023-04-10
+151,770,Beverly Karina,Pu Juarez,bpu@alleviatefinancial.com,770,true,PPD Agent,EDWING RENE ROSALES QUINTO,2023-04-10
+152,771,"Annette ","Garcia Muller ",annetteg@guardianlit.com,771,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-04-10
+153,772,Samuel Isaias,Barrios Tuna,samuelb@guardianlit.com,772,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-04-10
+154,774,Elmer Adan,Melgar Valle,elmerm@guardianlit.com,774,true,GLG Sales,LUISA FERNANDA LOPEZ TORINO,2023-04-10
+155,776,German Manuel,Perez Castillo,"gperez@alleviatefinancial.com ",776,true,Conv Negotiator,KATHERINE PAMELLA SAGASTUME ZELAYA,2023-04-17
+156,778,Ruth  Andrea,Castillo Subuyuj,"rucastillo@alleviatefinancial.com ",778,true,ALV PMOD Agent,XAVIER ALEXANDER IXCOT VASQUEZ,2023-04-17
+157,783,Nina Alessandra,Okun Perez,ninao@guardianlit.com,783,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+158,788,"Ricardo ",Monterroso Clara,rmonterroso@alleviatefinancial.com,788,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2023-04-17
+159,792,Hania Gabriela,De Leon Herrera,hanial@guardianlit.com,792,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-07-09
+160,813,Jhefry Adan,Veliz Ramirez,jramirez@alleviatefinancial.com,813,true,PPD Agent,KEVIN GARCIA,2024-11-25
+161,814,Paulina,Fagiani Guerra,paulinaf@guardianlit.com,814,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-06-13
+162,815,Dynian Mizbel,Villatoro Avila,dynianv@guardianlit.com,815,true,GLG Non Lega CA,CARLOS FEDERICO MORA AGUILAR,2023-04-24
+163,817,Noel Alberto,Escobar Saenz,noele@guardianlit.com,817,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-05-01
+164,821,Gustavo Renee,Rodriguez Cifuentes,gustavor@guardianlit.com,821,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-05-03
+165,823,Ana Patricia,Pira Alconero,anap@guardianlit.com,823,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2023-05-08
+166,827,Jose Raul,Aguilar Aguilar,josea@guardianlit.com,827,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2023-05-08
+167,829,Katerinne Mishell,Sobalvarro Quevedo,katerinnes@guardianlit.com,829,true,Encore Correspondence,URIEL AUDELINO DE LEON FONSECA,2023-05-08
+168,830,Luis Diego,Hernandez Solorzano,luish@guardianlit.com,830,true,Encore Correspondence,URIEL AUDELINO DE LEON FONSECA,2023-05-08
+169,832,Erick Felipe Alexander,Solares Galdamez,ericks@guardianlit.com,832,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2023-05-15
+170,834,Antonio Josue,Martinez Dubon,joshm@alleviatetax.com,834,true,QCC Analyst,GERSON HERNANDEZ,2024-07-09
+171,836,Ines Maria,Mejia Najarro,inesme@guardianlit.com,836,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-05-22
+172,838,Rolando Jonathan,Alvarado,rolandoa@guardianlit.com,838,true,PNG Settlement Workflow Aceleration Team,CARLOS FEDERICO MORA AGUILAR,2023-05-30
+173,840,Luis Pedro,Sacor Alvarado,luissac@guardianlit.com,840,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-05-30
+174,841,Jeffry Estuardo,Samayoa Franco,jeffrys@guardianlit.com,841,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-05-30
+175,842,Vivi Estephani Verenisse,Gonzalez Mendez,vivig@guardianlit.com,842,true,PNG Settlement Workflow Aceleration Team,CARLOS FEDERICO MORA AGUILAR,2023-05-30
+176,846,Maria de los Angeles,Guaran Hurtarte,mariag@guardianlit.com,846,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2023-05-30
+177,849,Seidy Andrea,Citalan Reyna,seidyc@guardianlit.com,849,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2023-06-06
+178,850,Andrea Lissette,Garcia Lou,andreag@guardianlit.com,850,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2023-06-06
+179,852,Omar Javier Alejandro,Rubio Mejia,omarr@guardianlit.com,852,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2023-06-06
+180,855,Carlos Alberto,Nowell Villatoro,cnowell@tplend.com,855,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2023-06-12
+181,857,Adriana Isabel,Kiehnle Mendez,akiehnle@tplend.com,857,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2023-06-12
+182,864,Ana Joseline,De Leon Lopez,adeleon@tplend.com,864,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2023-06-12
+183,876,Carlos Alberto,Barrios Barrios,cbarrios@alleviatefinancial.com,876,true,Bulk Negotiator,LINDSLEY ROMAN,2023-06-26
+184,877,Edwing Rene,Rosales Quinto,edrosales@alleviatefinancial.com,877,true,Team Lead,KEVIN GARCIA,2023-06-26
+185,881,Maria del Pilar,Angel Briones,mariaan@guardianlit.com,881,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-07-06
+186,883,Abraham Tare,Quexel Ayala,abrahamq@guardianlit.com,883,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-07-10
+187,886,Andrea Lisbeth,Calderon Cifuentes,andreac@guardianlit.com,886,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2023-07-06
+188,887,Lucia,Viteri Fortuny,luciav@guardianlit.com,887,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2023-07-06
+189,890,Carlos Humberto,Campos Figueroa,carlosca@guardianlit.com,890,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2023-07-06
+190,891,Katherine Daniela,Mazariegos Escobar,katherinem@guardianlit.com,891,true,ER Encore Calls 1HR,URIEL AUDELINO DE LEON FONSECA,2023-07-06
+191,895,Mireya Odyli,Dominguez Sosa de Pelaez,mireyas@guardianlit.com,895,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2023-07-17
+192,904,Maria Fernanda,Chua Hernandez,mariac@guardianlit.com,904,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-07-17
+193,906,Darian Nicole,Palacios Trampe,darianp@guardianlit.com,906,true,QA Encore Account Manager,LUISA FERNANDA LOPEZ TORINO,2023-07-17
+194,909,Andrea Carolina,Suarez Castillo,asuarez@alleviatefinancial.com,909,true,Manager,GERSON HERNANDEZ,2023-07-24
+195,911,Gilda Carmina,Merida Perez,gildam@guardianlit.com,911,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-07-24
+196,913,Glenda Michel,Gonzalez Lima,glendag@guardianlit.com,913,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-07-24
+197,918,Xavier Alexander,Ixcot Vasquez,xixcot@alleviatefinancial.com,918,true,Team Lead,MONICA FUENTES,2023-07-24
+198,921,Heidi Gabriela,Lemus Arriaga,heidil@guardianlit.com,921,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2023-08-04
+199,923,Genesis Andrea,Davila Hernandez de Perez,genesisd@guardianlit.com,923,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-10-03
+200,924,Diego,Ponce De Leon,diegop@guardianlit.com,924,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-04
+201,926,Gabriela Alejandra,Perez Consuegra,gabrielap@guardianlit.com,926,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-04
+202,927,Susana Leticia,Molina Del Aguila,susanam@guardianlit.com,927,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-04
+203,929,Kender Estuardo,Quinonez Sandoval,kenderq@guardianlit.com,929,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2023-08-07
+204,932,Hael Denisse,Lopez Juarez,haell@guardianlit.com,932,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-14
+205,933,Gabriela,Castaneda Hernandez,gabrielac@guardianlit.com,933,true,QA Encore Account Manager,LUISA FERNANDA LOPEZ TORINO,2023-08-14
+206,936,Allan Gabriel,Ibarra Roca,allani@guardianlit.com,936,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-14
+207,937,Mynor Daniel,Galindo Corado,mynorg@guardianlit.com,937,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-14
+208,938,Carlos Eduardo,Vasquez Carballo,carlosv@guardianlit.com,938,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-14
+209,939,Josue Alexander,Cruz Melgar,josuec@guardianlit.com,939,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-14
+210,941,Josue Emanuel,Paredes,josuep@guardianlit.com,941,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2023-08-14
+211,945,William Antonio,Lopez Paz,williaml@guardianlit.com,945,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2023-08-21
+212,946,"Milton Geovani ",Quintana Burbano,miltonq@guardianlit.com,946,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2024-10-29
+213,951,Cesar Eduardo,Kestler Rabanales,ckestler@alleviatefinancial.com,951,true,Bulk Negotiator,LINDSLEY ROMAN,2023-08-25
+214,952,Erick Jacob,Lopez Rosales,elopez@alleviatefinancial.com,952,true,Bulk Negotiator,LINDSLEY ROMAN,2023-08-25
+215,953,Darlene Paola,Ortiz Ruiz,dortiz@alleviatefinancial.com,953,true,Bulk Negotiator,LINDSLEY ROMAN,2023-08-25
+216,963,Martin Estuardo,Zea Valdes,mzea@alleviatefinancial.com,963,true,Manager,GERSON HERNANDEZ,2023-08-25
+217,971,Miguel Alfredo,De La Cruz Zamora,mcruz@alleviatefinancial.com,971,true,Real Time Analyst,GERSON HERNANDEZ,2023-09-05
+218,979,"Daniel Alejandro ",Alvarez Ovando,dalvarez@alleviatefinancial.com,979,true,Team Lead,XAVIER ALEXANDER IXCOT VASQUEZ,2023-09-18
+219,982,Geovany Eduardo,Guerra Orellana,geovanyg@guardianlit.com,982,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-09-18
+220,984,Alyson Sofia,Rosales Beteta,arosales@alleviatefinancial.com,984,true,PPD Team Captain,KEVIN GARCIA,2023-09-18
+221,988,Margory Anahi,Lopez Pelico de Sosa,mlopez@alleviatefinancial.com,988,true,PPD Agent,KEVIN GARCIA,2023-10-09
+222,992,Christian Rodolfo Geovanni,Valencia Zea,cvalencia@alleviatefinancial.com,992,true,PPD Agent,EDWING RENE ROSALES QUINTO,2023-10-09
+223,995,Eder Omar,Gonzalez Lopez,ederg@guardianlit.com,995,true,Icon Workforce Management,MARCIA JIMENEZ,2023-11-13
+224,997,Vinicio Luis Antonio,Mota Molina,vmolina@tplend.com,997,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2023-12-11
+225,1007,Carlos Daniel,Monroy Hernandez,chernandez@tplend.com,1007,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2023-12-11
+226,1012,Marlon Alejandro,Jerez Aguilar,marlonj@guardianlit.com,1012,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2023-12-12
+227,1013,Jorge Luis,Vargas San Jose,jjose@tplend.com,1013,true,Real Time Analyst,GERSON HERNANDEZ,2023-12-18
+228,1023,Marlon Fermin,Ramirez Albizurez,marlonr@guardianlit.com,1023,true,GLG Sales,LUISA FERNANDA LOPEZ TORINO,2024-01-02
+229,1025,Rita Alejandra,Morales Maldonado,ritam@guardianlit.com,1025,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-01-02
+230,1030,Ana Karen,Lopez Lopez,anlopez@alleviatefinancial.com,1030,true,Facilitator,XAVIER ALEXANDER IXCOT VASQUEZ,2024-01-05
+231,1033,Elizabeth Karolina,Ortiz Berduo de Gonzalez,eortiz@alleviatefinancial.com,1033,true,Conv Negotiator,KATHERINE PAMELLA SAGASTUME ZELAYA,2024-01-05
+232,1036,Astrid,Celada Arevalo,aarevalo@alleviatefinancial.com,1036,true,Conv Negotiator,KATHERINE PAMELLA SAGASTUME ZELAYA,2024-01-05
+233,1040,"Luisa Fernanda ",Grajeda Sandoval,lugrajeda@alleviatefinancial.com,1040,true,QCC Analyst,GERSON HERNANDEZ,2024-05-06
+234,1043,Santiago Alberto,Barrera Leiva,sbarrera@alleviatefinancial.com,1043,true,Conv Negotiator 30MIN,KATHERINE PAMELLA SAGASTUME ZELAYA,2024-01-05
+235,1046,Daniela Paola,Grajeda Sandoval,danielag@guardianlit.com,1046,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-01-05
+236,1052,Andrea Regina,Pineda Morales,apineda@alleviatefinancial.com,1052,true,PPD Agent,EDWING RENE ROSALES QUINTO,2024-01-22
+237,1053,Erick Marvin,Lopez Cotzal,erlopez@alleviatefinancial.com,1053,true,PPD Agent,EDWING RENE ROSALES QUINTO,2024-01-22
+238,1054,Alca,Mendez Gomez,algomez@alleviatefinancial.com,1054,true,PPD Agent,EDWING RENE ROSALES QUINTO,2024-01-22
+239,1061,Johanny Alexandra,Sandoval Lopez,johannys@guardianlit.com,1061,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-02-05
+240,1062,Karen Sofia,Ruano Catalan,karenr@guardianlit.com,1062,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-02-05
+241,1065,Mario Roberto,Amado Henkle,marioam@guardianlit.com,1065,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-02-05
+242,1066,Francesca Maria,Bonifasi Garcia,francescasb@guardianlit.com,1066,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-02-05
+243,1067,Javier Estuardo,Pimentel Cifuentes,javierp@guardianlit.com,1067,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-02-05
+244,1071,Dan Madiel,Zuniga Mayen,dzuniga@iconbpo.com,1071,true,Icon Human Resources,OSWALD AQUINO,2024-02-02
+245,1073,Oscar Gustavo,Godinez Alvarado,oscarg@guardianlit.com,1073,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2024-02-12
+246,1075,Hugo Nery,Palomo Barrientos,hugop@guardianlit.com,1075,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2024-02-12
+247,1081,Allan Jose,Arredondo Cabrera,aarredondo@alleviatefinancial.com,1081,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2024-02-16
+248,1083,Mitzi Gabriela,Sandoval Aguirre,mitzis@alleviatefinancial.com,1083,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2024-02-16
+249,1086,Sofia Dayanara,Boche Lima,sofiab@guardianlit.com,1086,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-03-19
+250,1089,Lourdes Lucia,Portillo Villeda,lvilleda@tplend.com,1089,true,Retentions,ASTRID FIGUEROA,2024-02-19
+251,1092,Oscar Leonel,Molina Lemus,olemus@tplend.com,1092,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2024-02-19
+252,1103,Byron Hiram,Leiva Contreras,bcontreras@tplend.com,1103,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2024-02-19
+253,1108,Heidy Jackelin,Cortez Escobar,heidyc@guardianlit.com,1108,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-02-22
+254,1113,Guillermo Andres,Gonzalez Ramirez,gugonzalez@alleviatefinancial.com,1113,true,BI Analyst,LUIS DIEGO ZEA VALDEZ,2024-03-01
+255,1114,Luis Diego,Zea Valdez,lzea@alleviatefinancial.com,1114,true,BI Lead,GERSON HERNANDEZ,2024-03-01
+256,1123,Jose Andres,Juarez Valdez,jjuarez@alleviatefinancial.com,1123,true,Jr Negotiator,MARTIN ZEA,2024-03-08
+257,1124,"Christian Adrian ",Gonzalez Cruz,christiang@guardianlit.com,1124,true,ER Encore Calls 1HR,URIEL AUDELINO DE LEON FONSECA,2024-11-19
+258,1132,Jose Pablo,Viana Vidal,jviana@alleviatefinancial.com,1132,true,BI Analyst,LUIS DIEGO ZEA VALDEZ,2024-03-12
+259,1134,Philip Anthony,Avalos,philipa@guardianlit.com,1134,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-03-19
+260,1138,"Kevin Alejandro ",Orellana Juarez,kevino@guardianlit.com,1138,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-04-02
+261,1142,"Jackeline Mishell ",Petzey Reyes,jackelinep@guardianlit.com,1142,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-04-02
+262,1143,"Ana Carolina ",Sosa Martinez,anas@guardianlit.com,1143,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-04-02
+263,1147,Maria Gracia,Montes De Oca Pulido,mariam@guardianlit.com,1147,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-09-02
+264,1152,Adolfo,Santiago Barrera,adolfos@guardianlit.com,1152,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-04-09
+265,1154,"Carlos Giovanni ",Villeda Mendez,cvilleda@alleviatefinancial.com,1154,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2024-05-06
+266,1155,"Lindsley Julieta ",Roman Fernandez,lroman@alleviatefinancial.com,1155,true,Facilitator,XAVIER ALEXANDER IXCOT VASQUEZ,2024-05-06
+267,1156,Luis Jose Adrian,Montenegro Moreno,ladrian@alleviatefinancial.com,1156,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2024-05-06
+268,1159,"Gabriela Alejandra ",Aguilar Marroquin,gaaguilar@alleviatefinancial.com,1159,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2024-05-06
+269,1160,"Cristian Jacob ",Vasquez Vaides,cvasquez@alleviatefinancial.com,1160,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2024-05-06
+270,1161,"Itza ",Alvarez Quinonez,iquinonez@alleviatefinancial.com,1161,true,QCC Analyst,GERSON HERNANDEZ,2024-05-06
+271,1162,"Emily Tamara ",Juarez Rodriguez,emjuarez@alleviatefinancial.com,1162,true,PPD Agent,KEVIN GARCIA,2024-05-06
+272,1173,"Lucia Teresa ",Jimenez Arana,luciaj@guardianlit.com,1173,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-05-20
+273,1175,"Erick Emanuel ",Morales Mendez,erickm@guardianlit.com,1175,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-05-20
+274,1176,"Jeronimo  ",Orantes de Paz,jeronimo@guardianlit.com,1176,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-05-20
+275,1177,Michelle Alejandra,Chinchilla Lopez,mchinchilla@alleviatefinancial.com,1177,true,Final Enrollment Agent,VERONICA QUINONEZ,2024-05-28
+276,1179,Leticia Alejandra,Guanta Hurtarte,lguanta@alleviatefinancial.com,1179,true,Final Enrollment Agent,VERONICA QUINONEZ,2024-05-28
+277,1181,Allan David,Beltethon De Leon,abeltheton@alleviatefinancial.com,1181,true,Final Enrollment Agent,JOSE BENEGAS,2024-05-28
+278,1182,Maria Yolanda,Valdez Gordillo,mvaldez@alleviatefinancial.com,1182,true,QCC Analyst,GERSON HERNANDEZ,2024-06-10
+279,1184,"Michelle ",Garcia Muller,michelleg@guardianlit.com,1184,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-06-11
+280,1186,Jackelin Elizabeth,Rabanales Munoz,jackelinr@guardianlit.com,1186,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-06-11
+281,1188,Paulina Yaneth,Esquivel Santos,paulinae@guardianlit.com,1188,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-06-11
+282,1190,Cesia Andrea,Gonzalez Toledo,cesiag@guardianlit.com,1190,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-06-11
+283,1192,Laura Rebeca,Pacheco Chajon,laurap@guardianlit.com,1192,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-06-11
+284,1195,Ana Cristina,Giron Hernandez,cristinag@iconbpo.com,1195,true,Icon Human Resources,OSWALD AQUINO,2024-06-19
+285,1196,"Jose Carlos ",Lara Garcia,jlara@alleviatefinancial.com,1196,true,Jr Negotiator,MARTIN ZEA,2024-07-10
+286,1201,Laura Veronica,Zeissig Pineda,lauraz@guardianlit.com,1201,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-07-15
+287,1206,Guillermo,Crocker Garcia,guillermoc@guardianlit.com,1206,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2024-08-05
+288,1209,"Mario Raul ",Alvarez Chicas,marioa@guardianlit.com,1209,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-08-12
+289,1213,Stephany Ivonne,Carrera Galicia,scarrera@alleviatefinancial.com,1213,true,PPD Agent,EDWING RENE ROSALES QUINTO,2024-09-03
+290,1214,Maria Jose,Linares Mayen,mlinares@alleviatefinancial.com,1214,true,PPD Agent,EDWING RENE ROSALES QUINTO,2024-09-03
+291,1215,Maria Jose,"Rodas Rosales ",mrodas@alleviatefinancial.com,1215,true,PPD Agent,EDWING RENE ROSALES QUINTO,2024-09-04
+292,1216,Jorge Javier,Alarcon Lopez,jorgea@guardianlit.com,1216,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-09-11
+293,1227,Selvin Alemao,Salazar Hernandez,shernandez@alleviatefinancial.com,1227,true,Data Analyst,GERSON HERNANDEZ,2024-10-09
+294,1232,Anthony Josue,Castellanos,anthonyc@guardianlit.com,1232,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-10-16
+295,1235,Sergio David,Silva Garcia,sergios@guardianlit.com,1235,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-10-16
+296,1237,Katherine Pamella,Sagastume Zelaya,kzelaya@alleviatefinancial.com,1237,true,Team Lead,ANDREA SUAREZ,2024-10-29
+297,1238,Jennyffer Gabriela,Escobar Cosajay,jennyffere@guardianlit.com,1238,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2024-10-29
+298,1240,Paula Leticia,Figueroa Contreras de Ramirez,paulaf@guardianlit.com,1240,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2024-10-29
+299,1242,Laura Michell,Castillo Subuyuj,laurac@guardianlit.com,1242,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2024-11-04
+300,1243,Karla Paola,Martinez Corado,karlam@guardianlit.com,1243,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2024-11-04
+301,1244,Lenin Benedicto,Lira Mencos,leninl@guardianlit.com,1244,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2024-11-04
+302,1245,Maria Jose,Estrada Aguilar,mariae@guardianlit.com,1245,true,Encore Correspondence 30MIN,URIEL AUDELINO DE LEON FONSECA,2024-11-04
+303,1246,Wilmer David,Gamez Perez,wilmerg@guardianlit.com,1246,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2024-11-04
+304,1247,"Victor Daniel ",Morales Sosa,victorm@guardianlit.com,1247,true,Payment Processing QA,LUISA FERNANDA LOPEZ TORINO,2024-11-05
+305,1251,David Enrique,Yax Cante,davidy@guardianlit.com,1251,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-11-06
+306,1253,Sofia Elizabeth,Alarcon Palencia,sopalencia@alleviatefinancial.com,1253,true,Real Time Analyst,GERSON HERNANDEZ,2024-11-12
+307,1254,Carlos Rafael,Montoto Lopez,carlosmo@guardianlit.com,1254,true,GLG Scrubs Negotiations,CARLOS FEDERICO MORA AGUILAR,2024-11-18
+308,1256,Ester Maria,Puaque Valenzuela,esterp@guardianlit.com,1256,true,ER Encore Calls 1HR,URIEL AUDELINO DE LEON FONSECA,2024-11-19
+309,1258,Ancelma,Monroy Ortiz,ancelmam@guardianlit.com,1258,true,ER Encore Calls 1HR,URIEL AUDELINO DE LEON FONSECA,2024-11-19
+310,1259,Ana Sofia,Ruiz Mendizabal,anar@guardianlit.com,1259,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2024-11-19
+311,1260,Andres Arturo,Reyes Morales,andresy@guardianlit.com,1260,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2024-11-19
+312,1261,"Mayra Alejandra ","Ajhic Xicay ",mayraaj@guardianlit.com,1261,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2024-11-19
+313,1264,Jose Daniel,Navas Ramirez,josen@guardianlit.com,1264,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-12-10
+314,1265,Jose Daniel,Chang Gomez,josec@guardianlit.com,1265,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-12-10
+315,1268,Gerardo Enrique,Jimenez Hernandez,gerardoj@guardianlit.com,1268,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-12-10
+316,1269,Krizia Susely,Reyes Barrios,kriziar@guardianlit.com,1269,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-12-10
+317,1272,Walter Alfredo,Monroy Lopez,walterm@guardianlit.com,1272,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-12-10
+318,1273,Hector Josue,Hernandez Paredez,hectorhe@guardianlit.com,1273,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-12-10
+319,1274,Pedro Exequiel,Perez Huox,pedrop@guardianlit.com,1274,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2024-12-10
+320,1279,Juan Jose,Corado Rendon,juanco@guardianlit.com,1279,true,GLG Trenches Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-01-06
+321,1280,Edgar Rene,Flores Suarez,edgarf@guardianlit.com,1280,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2025-01-06
+322,1281,Debbie Jasmine,Aragon Hernandez,debbiea@guardianlit.com,1281,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2025-01-06
+323,1283,Maria Jose,Gonzalez Hernandez,mariago@guardianlit.com,1283,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2025-01-06
+324,1285,Angel Josue,Higueros Franco,angelh@iconbpo.com,1285,true,Icon IT Department,LUIS CASTELLANOS,2025-01-21
+325,1286,Ashley Georgette,Espinoza Stokes,ashleye@guardianlit.com,1286,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+326,1287,Elvis Renato,Tecun Morales,elvistec@guardianlit.com,1287,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+327,1291,Kadosh Israel Antonio,Lara Escobar,kadoshl@guardianlit.com,1291,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+328,1293,Iosif Steevy,Marroquin Lopez,losifm@guardianlit.com,1293,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+329,1294,Jorge Mario,Angel Ponciano,jorgean@guardianlit.com,1294,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+330,1296,Madis del Celli,Munoz Arreaga,madism@guardianlit.com,1296,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+331,1298,Israel Alfonso,Pimentel Cifuentes,israelp@guardianlit.com,1298,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+332,1300,"Victor Manuel ",Aguilar Gracias,victora@guardianlit.com,1300,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+333,1301,Andres,Soch Letran,andress@guardianlit.com,1301,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+334,1302,Juan David,Anzueto Diaz,juana@guardianlit.com,1302,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+335,1304,Pedro Alfredo,Guerra Cano,pedrog@guardianlit.com,1304,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+336,1305,Keren Jannine,Reyna Archila,karenre@guardianlit.com,1305,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+337,1306,Andres Obdulio,Morales Tobias,andresm@guardianlit.com,1306,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-21
+338,1307,Jose Alejandro,Pop Macz,josep@guardianlit.com,1307,true,Icon Workforce Management,MARCIA JIMENEZ,2025-01-23
+339,1308,Kimberly Yonari,Herrera Olivar,kimberlyh@guardianlit.com,1308,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-28
+340,1309,Margarita Maria,Giron Almengor,margaritag@guardianlit.com,1309,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-28
+341,1310,Javier Alejandro,Del Cid Sandoval,javierd@guardianlit.com,1310,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-28
+342,1311,Valerie Ruby,Austin,valeriea@guardianlit.com,1311,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-01-28
+343,1312,"Jose Gerardo ",Lopez Aguilar,jslopez@alleviatefinancial.com,1312,true,Bulk Negotiator,LINDSLEY ROMAN,2025-01-31
+344,1314,Yoselin Yaneth,Ortiz Tique,yortiz@alleviatefinancial.com,1314,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+345,1315,Carlos Alexander,Lopez de la Roca,clopez@alleviatefinancial.com,1315,true,Bulk Negotiator,LINDSLEY ROMAN,2025-01-31
+346,1316,Lester Omar,Junay Top,ljunay@alleviatefinancial.com,1316,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+347,1317,Alan Javier,Raxon Diaz,araxon@alleviatefinancial.com,1317,true,Conv Negotiator,MARTIN ZEA,2025-01-31
+348,1321,Ricardo Josue,Samayoa Castro,rsamayoa@alleviatefinancial.com,1321,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+349,1322,Melanie Andrea,Donis Ortiz,mdonis@alleviatefinancial.com,1322,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+350,1323,Kevin Antonio,Estupinian Palencia,kestupinian@alleviatefinancial.com,1323,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+351,1324,Jennyfer Paola,Rodriguez Choy,jerodriguez@alleviatefinancial.com,1324,true,ALV PMOD Agent,XAVIER ALEXANDER IXCOT VASQUEZ,2025-01-31
+352,1326,Dulce Maria,Caballeros Montufar,dcaballeros@alleviatefinancial.com,1326,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+353,1327,Cesar Augusto,Lutin Alvarado,clutin@alleviatefinancial.com,1327,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+354,1328,"Keyla Sucely ",Guerra Figueroa,kguerra@alleviatefinancial.com,1328,true,ALV PMOD Agent,XAVIER ALEXANDER IXCOT VASQUEZ,2025-01-31
+355,1329,Paola Sofia,Sandoval Milian,psandoval@alleviatefinancial.com,1329,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+356,1330,Hellen Rubi,Gonzalez Alvarez de Alvarado,hgonzalez@alleviatefinancial.com,1330,true,Facilitator,DANIEL ALEJANDRO ALVAREZ OVANDO,2025-01-31
+357,1331,Brandon Isaias,Sanchez Las,brandons@guardianlit.com,1331,true,Encore Correspondence 30MIN,URIEL AUDELINO DE LEON FONSECA,2025-02-03
+358,1332,Angel Abelardo,Quinonez Carranza,angelq@guardianlit.com,1332,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-02-03
+359,1333,Jairo Josue,Cifuentes Jimenez,jairoc@guardianlit.com,1333,true,Icon Workforce Management,MARCIA JIMENEZ,2025-02-10
+360,1335,Oscar Andres,Ramos Maldonado,oscarr@guardianlit.com,1335,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2025-02-18
+361,1336,Lorena Sofia,Jolon Motta,ljolon@alleviatefinancial.com,1336,true,PPD Agent,KEVIN GARCIA,2025-02-24
+362,1337,Victoria,Alvarado Rojas,vrojas@alleviatefinancial.com,1337,true,PPD Auths CS,KEVIN GARCIA,2025-02-24
+363,1338,Willard Nayib,Rodriguez Morales,wmorales@tplend.com,1338,true,Team Lead,ALLISON ARLETTE FLORES ARGUETA,2025-02-24
+364,1339,Hugo Humberto,Ordonez Menendez,hmenendez@alleviatefinancial.com,1339,true,PPD Auths CS,KEVIN GARCIA,2025-02-24
+365,1340,Carmen Mishell,Argueta Munoz,cmunoz@alleviatefinancial.com,1340,true,PPD Agent,KEVIN GARCIA,2025-02-24
+366,1342,Flor de Maria,Rodriguez Rivera,frodriguez@alleviatefinancial.com,1342,true,PPD Team Captain,KEVIN GARCIA,2025-02-24
+367,1344,Maria Laura,"Matias  ",mariamat@guardianlit.com,1344,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-02-24
+368,1345,Carlos Miguel,Zuniga Mayen,carloszu@guardianlit.com,1345,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-02-24
+369,1346,Mario Andre,Melendez Valenzuela,mariom@guardianlit.com,1346,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-02-24
+370,1349,Rodrigo Sebastian,"Lemus Escobar ",rescobar@alleviatefinancial.com,1349,true,PPD Team Captain,KEVIN GARCIA,2025-02-24
+371,1352,Allan Daniel,Navas Garcia,allann@guardianlit.com,1352,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-02-24
+372,1353,"Julio  ",Zamora Ovando,jzamora@alleviatefinancial.com,1353,true,PPD Agent,KEVIN GARCIA,2025-02-24
+373,1356,Vivian Maria,"Cabrera Barrera ",vivianca@guardianlit.com,1356,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2025-02-24
+374,1359,Cesar Fernando,Garcia Rios,cesarg@guardianlit.com,1359,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-02-24
+375,1362,Ericka Jeanette,Salazar Ramirez,erickas@iconbpo.com,1362,true,Icon Human Resources,OSWALD AQUINO,2025-03-03
+376,1367,Oliver Daniel,Castillo Herrera,oliverc@guardianlit.com,1367,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-03-05
+377,1371,Juan Pablo,Diaz Alvarez,juand@guardianlit.com,1371,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-03-05
+378,1374,Dylan Jefri,Portillo Ortiz,dylanp@guardianlit.com,1374,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-03-11
+379,1376,"Christian Alejandro ",Arriola Trejo,carriola@alleviatefinancial.com,1376,true,Final Enrollment Agent,JOSE BENEGAS,2025-03-17
+380,1377,Renato Enrique,Chua Lucero,rchuga@alleviatefinancial.com,1377,true,Final Enrollment Agent,VERONICA QUINONEZ,2025-03-17
+381,1378,Kevin Estuardo,Gil Vicente,kvicente@alleviatefinancial.com,1378,true,QCC Analyst,GERSON HERNANDEZ,2025-03-17
+382,1379,Jaime Ezequiel,Chun Gudiel,jaimec@guardianlit.com,1379,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-03-24
+383,1381,Otto Leonel,Gonzalez Reyes,ottog@guardianlit.com,1381,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-03-24
+384,1386,Javier Fernando,Staackmann Mejia,javiers@guardianlit.com,1386,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-03-24
+385,1389,Evelyn Roxana,Lazo Cordero,evelynl@guardianlit.com,1389,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-03-24
+386,1390,Rosy Karina,Quino Suy,rosyq@iconbpo.com,1390,true,Icon Administration Department,OSWALD AQUINO,2025-03-27
+387,1394,Katherine Samantha Abigail,Alva Lopez,kalva@alleviatefinancial.com,1394,true,Sales Admin,GERSON HERNANDEZ,2025-04-21
+388,1395,Kevin Estuardo,Rivera Hernandez,kevinr@guardianlit.com,1395,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+389,1396,Elida Maria Ester,Vasquez Arreaga,elidav@guardianlit.com,1396,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+390,1400,Daniel Fernando,Arevalo Santos,danielar@guardianlit.com,1400,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+391,1401,Aditi Radharani Mireya,Castillo Morales,aditic@guardianlit.com,1401,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+392,1402,Jose Benjamin,Samayoa Villatoro,josesa@guardianlit.com,1402,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+393,1403,Otto Rolando,Sitamul Cruz,ottos@guardianlit.com,1403,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+394,1406,Jorge Carlos,Barrios Lima,jorgeb@guardianlit.com,1406,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+395,1409,Jose Angel,Villalta Estrada,josevi@guardianlit.com,1409,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-04-28
+396,1411,Kevin Paul,Barrera Zambrano,kbarrera@alleviatefinancial.com,1411,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-05-05
+397,1412,Luisa Fernanda,Mendez Makepeace,lmendez@alleviatefinancial.com,1412,true,Account Manager 1HR,CHRISTIAN ARCHILA,2025-05-05
+398,1414,Erick Rene,Lopez Reyes,erickl@guardianlit.com,1414,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2025-05-05
+399,1417,"Estefany Lilieth ",Molina Martinez,estefanym@guardianlit.com,1417,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2025-05-05
+400,1418,Maria Alejandra,Ucha Valenzuela,mariau@guardianlit.com,1418,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2025-05-05
+401,1419,Kevin Gudiel,Monterroso Rodriguez,kevinm@guardianlit.com,1419,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2025-05-05
+402,1420,Leopoldo Leonel,Arreaga Serrano,leopoldoa@guardianlit.com,1420,true,Icon Workforce Management,MARCIA JIMENEZ,2025-05-08
+403,1423,Jorge Mario,Yupe Ramirez,jorgeyu@guardianlit.com,1423,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-05-12
+404,1426,Alan Daniel,Tomas Reyes,alanr@guardianlit.com,1426,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2025-05-19
+405,1427,Diana Seleste,Letona Mazariegos,dianad@guardianlit.com,1427,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2025-05-19
+406,1428,Daniel Benjamin,Gomez Melgarejo,danielg@guardianlit.com,1428,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2025-05-20
+407,1429,Nicolle Stephania,Sagastume Zelaya,nicolles@guardianlit.com,1429,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-05-27
+408,1431,Josue David Antonio,Sutuj Carias,josues@guardianlit.com,1431,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+409,1432,Axel Marco Tulio,Ramirez Gonzalez,axelr@guardianlit.com,1432,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+410,1433,"Efren Alejandro ",De Leon Balcarcel,efrend@guardianlit.com,1433,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+411,1438,Alejandro David,Mateo Jimenez,alejandroma@guardianlit.com,1438,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+412,1439,Ruth Sarai,Acosta Say,rutha@guardianlit.com,1439,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+413,1440,Angel Manuel,Martinez Rodriguez,angelm@guardianlit.com,1440,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+414,1442,Juan Jose,Castaneda Giron,juanc@guardianlit.com,1442,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+415,1443,Angel Emanuel,Ortiz Ramirez,angelo@guardianlit.com,1443,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-06-03
+416,1446,Daniel Oswaldo,Leon Gonzalez,danielle@guardianlit.com,1446,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-06-16
+417,1447,Melvin Brayan,Moran Lopez,melvinm@guardianlit.com,1447,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-06-16
+418,1448,Delmy Marylena,Lopez Lopez,delmyl@guardianlit.com,1448,true,Encore Correspondence 30MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+419,1449,Melany Eunice,De la Rosa Gonzalez,melanyr@guardianlit.com,1449,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+420,1450,Angel Mario,Ramirez Vasquez,angelr@guardianlit.com,1450,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+421,1452,James Anderson,Mendez Garcia,jamesm@guardianlit.com,1452,true,Encore Correspondence 30MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+422,1453,Nataly Estefania,Blanco Ramirez,natalyb@guardianlit.com,1453,true,Encore Correspondence 30MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+423,1454,Oscar Enrique,Ixcoy Pojoy,oscari@guardianlit.com,1454,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+424,1455,Mario Alejandro,Mendez Mena,mariome@guardianlit.com,1455,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+425,1456,Marco Antonio,Valenzuela Rodriguez,marcov@guardianlit.com,1456,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+426,1457,Andrea Melisa,Corzo Sanchez,andreaco@guardianlit.com,1457,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+427,1458,Mimi Susana,Amiel Ortega,mimia@guardianlit.com,1458,true,Payment Processing Equinox Encore 60 MIN,URIEL AUDELINO DE LEON FONSECA,2025-06-23
+428,1462,Victor Emanuel,Santos Gonzalez,victorsa@guardianlit.com,1462,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-07-03
+429,1466,Katherine Isabel,Gomez Melgarejo,katherineg@guardianlit.com,1466,true,GLG Trenches Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-07-03
+430,1467,Yoseline Michelle,Sosa Arriola,yoselines@guardianlit.com,1467,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-07-03
+431,1468,Rene Rodolfo,Ruano Leon,rener@guardianlit.com,1468,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-07-03
+432,1469,Carlos Alberto,Perez Lopez,carlospe@guardianlit.com,1469,true,Docket Clerks,URIEL AUDELINO DE LEON FONSECA,2025-07-09
+433,1470,MariaPaula,Cuellar Monterroso,mariapaulac@guardianlit.com,1470,true,Docket Clerks,URIEL AUDELINO DE LEON FONSECA,2025-07-09
+434,1471,Karla Isabel,Marroquin Ocampo,karlama@guardianlit.com,1471,true,Docket Clerks,URIEL AUDELINO DE LEON FONSECA,2025-07-09
+435,1472,Meylin Sarai,Cortave Perez,meylinc@guardianlit.com,1472,true,Docket Clerks,URIEL AUDELINO DE LEON FONSECA,2025-07-09
+436,1473,Jeimy Xiomara,Arana Lopez,jarana@tplend.com,1473,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2025-07-21
+437,1474,Ana Gabriela,Moran Gonzalez,amoran@tplend.com,1474,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2025-07-21
+438,1475,Maria Renata,Estrada Guerra,mestrada@tplend.com,1475,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2025-07-21
+439,1476,Abaru,Pena,apena@tplend.com,1476,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2025-07-21
+440,1477,Francisco Romeo,Cifuentes Frutos,cfifuentes@tplend.com,1477,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2025-07-21
+441,1479,Luis Rene,Najarro Schlesinger,lschlesinger@tplend.com,1479,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2025-07-21
+442,1481,Herbert Keneth Leonardo,Aitken Esquivel,hesquivel@tplend.com,1481,true,Loan Advisor,DIANA YESENIA GUEVARA AVILA DE PAIZ,2025-07-21
+443,1482,Noe Francisco de Jesus,Pinzon Solorzano,npinzon@tplend.com,1482,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2025-07-21
+444,1483,Mario Rodolfo,Taques Gonzalez,mtaques@tplend.com,1483,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2025-07-21
+445,1485,Luis Amilcar,Paz Gonzalez,lpaz@tplend.com,1485,true,Loan Advisor,WILLARD NAYIB RODRIGUEZ MORALES,2025-07-21
+446,1487,Kevin Antony,Godoy Escobar,kgodoy@alleviatefinancial.com,1487,true,ALV Underwriters,JOSE BENEGAS,2025-08-18
+447,1488,Josseline Andrea,Anzueto Chinchilla,josselinea@guardianlit.com,1488,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+448,1489,Heidy Priscila,Garcia Martinez,hmartinez@alleviatefinancial.com,1489,true,Sales Admin,GERSON HERNANDEZ,2025-08-18
+449,1490,Randy Otoniel,Fuentes Sagastume,randyf@guardianlit.com,1490,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+450,1491,Eduardo Jose,Caal,ecaal@alleviatefinancial.com,1491,true,ALV Underwriters,VERONICA QUINONEZ,2025-08-18
+451,1493,Luis Alberto,Garcia Caal,luisg@guardianlit.com,1493,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+452,1494,Carlos Eduardo,Ortiz Aguilar,carloso@guardianlit.com,1494,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+453,1496,Jose Andres,Arias Bustamante,jbustamante@alleviatefinancial.com,1496,true,Sales Admin,GERSON HERNANDEZ,2025-08-18
+454,1497,Jose Carlos,Marcos Chacon,josem@guardianlit.com,1497,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+455,1498,Sandy Paola,Estrada Penate,sandye@guardianlit.com,1498,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+456,1499,Heidy Valeria,Gutierrez Martinez,heidyg@guardianlit.com,1499,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+457,1501,Alvaro Gabriel,Pirir Santos,alvarop@guardianlit.com,1501,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+458,1502,Anthony Alejandro,Hernandez Morataya,anthonyh@guardianlit.com,1502,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+459,1505,Stefhani Lucia,Roche Aroche,stefhanir@guardianlit.com,1505,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+460,1506,Marvin Andres,Gutierrez Calderon,marving@guardianlit.com,1506,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+461,1507,Guillermo Libardo Samuel,Orellana Esquite,guillermoo@guardianlit.com,1507,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-08-18
+462,1508,Dorge Aleksei,Ozaeta Segura,dorgeo@guardianlit.com,1508,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2025-09-02
+463,1510,Marcia Edith,Jimenez Castanaza,marciaj@guardianlit.com,1510,true,Icon Workforce Management,LUIS CASTELLANOS,2025-09-16
+464,1511,Melissa Abigail,Ascencio Barrondo,melissaa@guardianlit.com,1511,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2025-09-16
+465,1512,Diego Alejandro,Alvarez Ramos,diegoa@guardianlit.com,1512,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2025-09-16
+466,1513,Maria Ester Alejandra,Majano Zamora de Garcia,mariamaj@guardianlit.com,1513,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2025-09-16
+467,1514,Monica del Carmen,Garcia Gonzalez,monicag@guardianlit.com,1514,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2025-09-16
+468,1515,Maria Mercedes,Cruz Pazan,mariacr@guardianlit.com,1515,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2025-09-16
+469,1516,Jennifer Cristina,Garcia Guerra,jenniferg@guardianlit.com,1516,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2025-09-16
+470,1518,Cinthia Michelle,Calderon Ochoa,cinthiac@guardianlit.com,1518,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2025-09-29
+471,1519,Jose Rodrigo,Quan Figueroa,joseq@guardianlit.com,1519,true,Encore Correspondence 30MIN,URIEL AUDELINO DE LEON FONSECA,2025-09-29
+472,1520,Carla Sofia,Mendez Recinos,carlam@guardianlit.com,1520,true,ER Encore BO 1HR,URIEL AUDELINO DE LEON FONSECA,2025-09-29
+473,1521,Jose Javier,Edelman Prado,joseed@guardianlit.com,1521,true,Encore Correspondence,URIEL AUDELINO DE LEON FONSECA,2025-09-29
+474,1523,Jared Enrique,Tzul Mejia,jaredt@guardianlit.com,1523,true,Encore Correspondence,URIEL AUDELINO DE LEON FONSECA,2025-09-29
+475,1524,Kimberly Elizabeth,Fernandez Diaz,kimberlyf@guardianlit.com,1524,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+476,1525,William Benoni,Flores Obregon,williamf@guardianlit.com,1525,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+477,1526,Jose Francisco,Martinez Avila,josemar@guardianlit.com,1526,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+478,1527,Luis Fernando,Saquic Garcia,luissa@guardianlit.com,1527,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+479,1529,Jeremy Franz,Hernandez Hernandez,jeremyh@guardianlit.com,1529,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+480,1530,Carlos Humberto,Velasquez,carlosve@guardianlit.com,1530,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+481,1532,Arodi Antonio,Sandoval Morales,arodis@guardianlit.com,1532,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+482,1534,Luis Roberto Carlos,Giron Ovando,luisgi@guardianlit.com,1534,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+483,1535,Maria Fernanda,Ruiz Aragon,mariaru@guardianlit.com,1535,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+484,1536,Jose Luis,Corzo Bazzini,joseco@guardianlit.com,1536,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+485,1537,Samuel Roberto,Lopez Lemus,samuell@guardianlit.com,1537,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+486,1538,Alejandro,Samayoa Paiz,alejandros@guardianlit.com,1538,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+487,1541,Elmer Alexander,Delgado Gomez,elmerd@guardianlit.com,1541,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+488,1542,Nataly Betsabe,Mejia Quiroa,natalym@guardianlit.com,1542,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+489,1543,Danny Alejandro,Mazariegos Escobar,dannym@guardianlit.com,1543,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+490,1547,Carlos Manuel,Saquilmer Giron,carlossa@guardianlit.com,1547,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-09-30
+491,1548,Andres,Paiz Caniz,andresp@guardianlit.com,1548,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2025-10-01
+492,1549,Cristopher William,Rueda Rangel,cristopherr@guardianlit.com,1549,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-10-03
+493,1552,Edwin Daniel,Ramirez Merida,edwinr@guardianlit.com,1552,true,Icon Workforce Management,MARCIA JIMENEZ,2025-10-06
+494,1553,Alan Emanuel,Pixtun Iquique,apixtun@alleviatefinancial.com,1553,true,Real Time Analyst,GERSON HERNANDEZ,2025-10-07
+495,1556,Jennifer Andrea,Rodriguez Lux,jeniferr@guardianlit.com,1556,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2025-10-27
+496,1557,Karla Regina,Hurtado Donis,karlah@guardianlit.com,1557,true,GLG Negotiations,CARLOS FEDERICO MORA AGUILAR,2025-10-27
+497,1559,Henry Eduardo,Garcia Monge,henrygm@guardianlit.com,1559,true,GLG Legal CA,CARLOS FEDERICO MORA AGUILAR,2025-10-28
+498,1560,Luis Carlos Misael,Montufar Subujuy,luismo@guardianlit.com,1560,true,GLG PMOD,CARLOS FEDERICO MORA AGUILAR,2025-11-05
+499,1561,Evelyn Ivonne,Rivera Corona,evelync@guardianlit.com,1561,true,GLG PMOD,CARLOS FEDERICO MORA AGUILAR,2025-11-05
+500,1562,Carlos Rafael,Ochoa Rodriguez,carrodriguez@alleviatefinancial.com,1562,true,Account Manager 1HR,KENNETH PINEDA,2025-11-17
+501,1563,Elias David,Lopez Santiago,esantiago@alleviatefinancial.com,1563,true,Account Manager 1HR,KENNETH PINEDA,2025-11-17
+502,1564,Melanie Azeneth,Herrera Perez,mperez@alleviatefinancial.com,1564,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-11-17
+503,1565,Karla Janeth,Sosa Castaneda,kcastaneda@alleviatefinancial.com,1565,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-11-17
+504,1566,Heber Rufino,Guzman Carcuz,hcarcuz@alleviatefinancial.com,1566,true,Account Manager 1HR,CHRISTIAN ARCHILA,2025-11-17
+505,1567,Osmar,Canizales Salvatierra,ocanizalez@alleviatefinancial.com,1567,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-11-17
+506,1568,Whitney Pahola,Rivera Morales,wrivera@alleviatefinancial.com,1568,true,Account Manager 1HR,CHRISTIAN ARCHILA,2025-11-17
+507,1569,Jessica Sorel,Salazar Garcia,jessigarcia@alleviatefinancial.com,1569,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-11-17
+508,1570,Ulises Alonzo,Roca Pleitez,upleitez@alleviatefinancial.com,1570,true,Account Manager 1HR,ASTRID FIGUEROA,2025-11-17
+509,1571,Luis Fernando,Ibanez Ibanez,libanez@alleviatefinancial.com,1571,true,Account Manager 1HR,KENNETH PINEDA,2025-11-17
+510,1572,Julio Antonio,Morales Reyes,jureyes@alleviatefinancial.com,1572,true,Account Manager 1HR,ASTRID FIGUEROA,2025-11-17
+511,1573,Kevin Bryan Adolfo,Rodriguez Gabriel,kgabriel@alleviatefinancial.com,1573,true,Account Manager 1HR,ASTRID FIGUEROA,2025-11-17
+512,1574,Eduardo Emmanuel,Coquix Castro,ecoquix@alleviatefinancial.com,1574,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-11-17
+513,1576,Flor de Maria,Chupina Barrera,mbarrera@alleviatefinancial.com,1576,true,Account Manager 1HR,KENNETH PINEDA,2025-11-17
+514,1577,Anibal Victor Manuel,De Matta Lopez,anilopez@alleviatefinancial.com,1577,true,Account Manager 1HR,ASTRID FIGUEROA,2025-11-17
+515,1579,Ana Gabriela,Alvarez Sanchez,aalvarez@alleviatefinancial.com,1579,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-11-17
+516,1580,Diego Roberto,Torres Roesch,droesch@alleviatefinancial.com,1580,true,Account Manager 1HR,ASTRID FIGUEROA,2025-11-17
+517,1581,Emily del Rosario,Martinez Sical,esical@alleviatefinancial.com,1581,true,Account Manager 1HR,CHRISTIAN ARCHILA,2025-11-17
+518,1583,Carlos Josue Jacob,Ramirez Garcia,cagarcia@alleviatefinancial.com,1583,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2025-11-17
+519,1584,Gerardo Misael,Ventura Collado,gcollado@alleviatefinancial.com,1584,true,Real Time Analyst,GERSON HERNANDEZ,2025-11-17
+520,1585,Luis Arturo,Bonilla Perez,luisb@guardianlit.com,1585,true,GLG PMOD,CARLOS FEDERICO MORA AGUILAR,2025-11-24
+521,1586,Sharon Joselyne,Genner Cruz,sharong@guardianlit.com,1586,true,GLG PMOD,CARLOS FEDERICO MORA AGUILAR,2025-11-24
+522,1587,Gabriel Arturo,Solorzano Gutierrez,gabriels@guardianlit.com,1587,true,GLG PMOD,CARLOS FEDERICO MORA AGUILAR,2025-11-24
+523,1588,Kenia Rebeca,Saenz Barrera,ksaenz@alleviatefinancial.com,1588,true,Finance Sales,CLAUDIA ARIENNE SANDOVAL VILLATORO,2025-12-01
+524,1589,Marco Antonio,Siguenza Solares,marcosig@guardianlit.com,1589,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2025-12-01
+525,1590,Jose David,Espana Lopez,josees@guardianlit.com,1590,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+526,1592,Jose Rodrigo,Madriz Figueroa,josemad@guardianlit.com,1592,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+527,1593,Melissa Adalia,Fernandez Velasquez,melissaf@guardianlit.com,1593,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+528,1594,Barbara Elizabeth,Alonzo Ramirez,barbaraa@guardianlit.com,1594,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+529,1595,Edgar Francisco,Vasquez Rodas,frankv@guardianlit.com,1595,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+530,1596,Luis Enrique,Juarez Sanchez,luisj@guardianlit.com,1596,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+531,1597,Glenda Cristina,Mazariegos Paz,glendam@guardianlit.com,1597,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+532,1598,Juan Andres,Pineda Enriquez,juanp@guardianlit.com,1598,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+533,1599,Kelly Franzinne,Espinoza Valenzuela,kellye@guardianlit.com,1599,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+534,1601,Aylin Dayana,Enriquez Salvador,ailyne@guardianlit.com,1601,true,Encore Account Managers 45MIN.,LUISA FERNANDA LOPEZ TORINO,2025-12-02
+535,1603,Krista Maria,Marroquin Valenzuela,kvalenzuela@alleviatefinancial.com,1603,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-01-05
+536,1604,Helen Melissa,Maldonado Puac,hmaldonado@alleviatefinancial.com,1604,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-01-05
+537,1609,Julio Cesar,Torres de Paz,jtorres@alleviatefinancial.com,1609,true,Account Manager 1HR,ASTRID FIGUEROA,2026-01-05
+538,1610,Lourdes Karina,Molina Revolorio,lrevolorio@alleviatefinancial.com,1610,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-01-05
+539,1611,Miguel Alberto,Campollo Chavez,mcampollo@alleviatefinancial.com,1611,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-01-05
+540,1612,Maria Alejandra,Cifuentes Arias,mcifuentes@alleviatefinancial.com,1612,true,ALV Payment Processing,KEVIN GARCIA,2026-01-05
+541,1613,Cesar Alejandro,Larios Alvarado,clarios@alleviatefinancial.com,1613,true,ALV Payment Processing,KEVIN GARCIA,2026-01-05
+542,1615,Marvin Adrian,Hernandez Pineda,mpineda@alleviatefinancial.com,1615,true,ALV Settlement Payment Processing,KEVIN GARCIA,2026-01-05
+543,1617,Jorge Fernando,Avendano Avila,javendano@alleviatefinancial.com,1617,true,Account Manager 1HR,ASTRID FIGUEROA,2026-01-05
+544,1620,Heidy Paola,Perez Gaitan,heiperez@alleviatefinancial.com,1620,true,ALV Settlement Payment Processing,KEVIN GARCIA,2026-01-05
+545,1621,Joel Alexander,Gil Valenzuela,jgil@alleviatefinancial.com,1621,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-01-05
+546,1622,Josue Daniel,Blanco Melgar,jblanco@alleviatefinancial.com,1622,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-01-05
+547,1623,David Samuel,Gonzalez Solis,dsolis@alleviatefinancial.com,1623,true,Sales Admin,GERSON HERNANDEZ,2026-01-05
+548,1624,Jostin Johel,Escobar Guevara,jescobar@alleviatefinancial.com,1624,true,Account Manager 1HR,ASTRID FIGUEROA,2026-01-05
+549,1625,Seidy Mariela,Castellanos Garcia,seidyca@guardianlit.com,1625,true,GLG PMOD,CARLOS FEDERICO MORA AGUILAR,2026-01-08
+550,1626,Helmuth Mayveric,Yat Melendez,helmuthy@guardianlit.com,1626,true,GLG PMOD,CARLOS FEDERICO MORA AGUILAR,2026-01-08
+551,1627,Jordy Mauricio,Mejia Guevara,jordym@iconbpo.com,1627,true,Icon IT Department,LUIS CASTELLANOS,2026-01-13
+552,1628,Helen Amanda,Vargas Lazaro,helenv@guardianlit.com,1628,true,GLG Negotiations QA,CARLOS FEDERICO MORA AGUILAR,2026-01-19
+553,1629,Ileym Giovanna Assenav,Ruiz Cervantes,ileymr@guardianlit.com,1629,true,Encore Expediter,CARLOS FEDERICO MORA AGUILAR,2026-01-26
+554,1630,Carlos Guillermo,De Leon Villegas,carlosdeleon@guardianlit.com,1630,true,Encore Correspondence,URIEL AUDELINO DE LEON FONSECA,2026-01-26
+555,1631,Kimberly Steffany,Ramirez Marroquin de Victorio,kimberlyra@guardianlit.com,1631,true,Encore Correspondence,URIEL AUDELINO DE LEON FONSECA,2026-01-26
+556,1632,Erick Fernando,Ortiz Tique,erortiz@alleviatefinancial.com,1632,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+557,1633,Jose Javier,Victorio Lopez,jvictorio@alleviatefinancial.com,1633,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+558,1634,Luis Diego,Cruz Cruz,lcruz@alleviatefinancial.com,1634,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+559,1635,Nery Alberto,Monroy Buenafe,nerymo@guardianlit.com,1635,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2026-02-02
+560,1636,Christian Alexander,Quiroz Olivares,cquiroz@alleviatefinancial.com,1636,true,Account Manager 1HR,ASTRID FIGUEROA,2026-02-02
+561,1637,Luis Eduardo,Morales Soto,lumorales@alleviatefinancial.com,1637,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-02-02
+562,1638,Brian Estuardo,Zuniga Fajardo,bzuniga@alleviatefinancial.com,1638,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-02-02
+563,1639,Luisa Maria Fernanda,Borrayo Avila,lborrayo@alleviatefinancial.com,1639,true,Account Manager 1HR,JONATHAN GUSTAVO POP VELASQUEZ,2026-02-02
+564,1640,Claudia Karina,Arevalo Cristales,carevalo@alleviatefinancial.com,1640,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-02-02
+565,1641,Walter Keneth,Gasparico Lopez,wlopez@alleviatefinancial.com,1641,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+566,1642,Luis Emilio,Giron Ramirez,lugiron@alleviatefinancial.com,1642,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-02-02
+567,1643,Benjamin,Pena Jimenez,bjiminez@alleviatefinancial.com,1643,true,Account Manager 1HR,ASTRID FIGUEROA,2026-02-02
+568,1644,Ana Ruth,Pacheco Chajon,apacheco@alleviatefinancial.com,1644,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-02-02
+569,1645,Lucas Orlando,Boror Siney,lboror@alleviatefinancial.com,1645,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+570,1646,Diego Armando,Damian Mejia,ddamian@alleviatefinancial.com,1646,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-02-02
+571,1647,Emily Rocio,Uribe Luna,euribe@alleviatefinancial.com,1647,true,Account Manager 1HR,ASTRID FIGUEROA,2026-02-02
+572,1648,Jessica Fabiola,Morales Estrada,jmorales@alleviatefinancial.com,1648,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+573,1649,Sharon Maitte,Alvizures Coc,salvizures@alleviatefinancial.com,1649,true,Account Manager 1HR,ASTRID FIGUEROA,2026-02-02
+574,1650,Brian Rafael,Aguilar Rios,baguilar@alleviatefinancial.com,1650,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+575,1651,Benjamin,Rivas Barillas,bbarillas@alleviatefinancial.com,1651,true,Account Manager 1HR,JORGE FERNANDO YONG GARCIA,2026-02-02
+576,1652,Luis Alfredo,Ruiz Gil,lruiz@alleviatefinancial.com,1652,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+577,1653,Andres Gustavo,Vasquez Chang,avasquez@alleviatefinancial.com,1653,true,Account Manager 1HR,JONATHAN GUSTAVO POP VELASQUEZ,2026-02-02
+578,1654,Karen Rachel,Gonzalez Toledo,kgonzalez@alleviatefinancial.com,1654,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+579,1655,Rodolfo Vinicio,Ruiz Lopez,rruiz@alleviatefinancial.com,1655,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-02-02
+580,1656,David Jose,Gomez Orantes,dgomez@alleviatefinancial.com,1656,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-02-02
+581,1657,Paola Sandy Maria,Carias Solares,pcarias@alleviatefinancial.com,1657,true,Account Manager 1HR,KENNETH PINEDA,2026-02-02
+582,1658,Rodrigo Isaac,Samayoa Vargas,rosamayoa@alleviatefinancial.com,1658,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-02-02
+583,1659,Rodrigo Jose,de Leon Morales,rmorales@alleviatefinancial.com,1659,true,Account Manager 1HR,CHRISTIAN ARCHILA,2026-02-02
+584,1660,Lucas Isaias,Aba Escobar,lescobar@alleviatefinancial.com,1660,true,Account Manager 1HR,JONATHAN GUSTAVO POP VELASQUEZ,2026-02-02
+585,1661,Geferson Ruben,Sanchez,gefersons@guardianlit.com,1661,true,Icon IT Department,LUIS CASTELLANOS,2026-02-10
+586,1662,Jarod Fernando,Fernandez Morales,jarodf@guardianlit.com,1662,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2026-02-16
+587,1663,Andrea Marisol,Caceres Casados,andreaca@guardianlit.com,1663,true,ER Encore 1HR,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+588,1664,Yessenia Paola,Munoz archila,yessenia@guardianlit.com,1664,true,ER Encore 1HR,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+589,1665,Shannon Stephanie,Teret,shannon@guardianlit.com,1665,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+590,1666,Marcia Anahy,Torres Balan,marcia@guardianlit.com,1666,true,ER Encore 1HR,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+591,1667,Evelin,Castillo Morales,evelin@guardianlit.com,1667,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+592,1668,Ricardo Alexander,Morales Gonzalez,ricardo@guardianlit.com,1668,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+593,1669,Monica Stephanie,Mazariegos Lopez,monicamazariegos@guardianlit.com,1669,true,Payment Processing Equinox Encore,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+594,1670,Williams,Saucedo Alvarez,william@guardianlit.com,1670,true,ER Encore 1HR,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+595,1671,Stephanie,Jo Stevens,stephanie@guardianlit.com,1671,true,ER Encore 1HR,URIEL AUDELINO DE LEON FONSECA,2026-02-16
+596,1672,Luis Fernando,Aguilar Aguilar,luisag@guardianlit.com,1672,true,Docket Clerks,URIEL AUDELINO DE LEON FONSECA,2026-02-23
+597,1673,Karen Margarita,Morales Minera,karenmo@guardianlit.com,1673,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+598,1674,Lester Alfredo,Hernandez Chic,lesterhe@guardianlit.com,1674,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+599,1675,Farid Youssef,Nasser Sanabria,faridn@guardianlit.com,1675,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+600,1676,Junitza Kristabel,Caceres Velasquez,jcaceres@alleviatefinancial.com,1676,true,Real Time Analyst,GERSON HERNANDEZ,2026-03-09
+601,1677,Jason Fernando,Aguila Gonzalez,jasondela@guardianlit.com,1677,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+602,1678,Alberto Francisco,Mazariegos Paniagua,albertoma@guardianlit.com,1678,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+603,1679,Jose Andres,Bonilla Barahona,josebo@guardianlit.com,1679,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+604,1680,Gabriela Emely,Diaz Escobar,gabrieladi@guardianlit.com,1680,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+605,1681,Victor Hugo,Sanchez Mendez,victorsan@guardianlit.com,1681,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+606,1682,Karen Stephany,Mendoza,karenme@guardianlit.com,1682,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+607,1683,Zaid Harol Danilo,Castillo Bustamante,zahidc@guardianlit.com,1683,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+608,1684,Oscar Giovanny,Guerra Lopez,oscargu@guardianlit.com,1684,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-03-09
+609,1685,Rosmery Elizabeth,Thomas Colop,rosmeryt@guardianlit.com,1685,true,Encore Analyst and Engineer Department,ERICK DE LA CRUZ,2026-03-16
+610,1686,Miguel Angel,Valencia Quezada,miguelva@guardianlit.com,1686,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+611,1687,Juan Carlos,Fernandez Castillo,juanfc@guardianlit.com,1687,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+612,1688,Danna Gabriela,Garrido Orellana,dannag@guardianlit.com,1688,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+613,1689,Oscar Rodolfo,Molina de Gandarias,oscarmg@guardianlit.com,1689,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+614,1690,Jandery Mishell,Maldonado Saenz,janderym@guardianlit.com,1690,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+615,1691,Javier Andres,Caceres Ruiz,javiercr@guardianlit.com,1691,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+616,1692,Hector Daniel,Martinez Gonzalez,hectorma@guardianlit.com,1692,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+617,1693,Luisa Maria,Ramos Perez,luisarp@guardianlit.com,1693,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+618,1694,Susel Andrea,Carrillo Hernandez,suselc@guardianlit.com,1694,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+619,1695,Angelica Maria,Lam Arevalo,angelicaml@guardianlit.com,1695,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+620,1696,Silvia Andrea,Flores Jolon,silviafl@guardianlit.com,1696,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+621,1697,Renato Jose,Rustrian,renatoru@guardianlit.com,1697,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
+622,1698,Jessica Alejandra,Aguilar Torres,jessicaat@guardianlit.com,1698,true,Encore Account Managers 1HR,LUISA FERNANDA LOPEZ TORINO,2026-04-06
