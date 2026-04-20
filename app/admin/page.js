@@ -7,6 +7,8 @@ import { collection, getDocs, addDoc, deleteDoc, doc, query, orderBy, Timestamp,
 function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSearchTerm, setShowEventModal, setShowPersonaModal, deleteEvento, generarYDescargarQR, generarQRTodos, sendQR, setShowImportModal }) {
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [sendingIds, setSendingIds] = useState(new Set());
+  const [currentPage, setCurrentPage] = useState(1);
+const visible = filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50);
 
   function toggleSelect(id) {
     setSelectedIds(prev => {
@@ -17,8 +19,8 @@ function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSea
   }
 
   function toggleSelectAll() {
-    const visible = filteredPersonas.slice(0, 50);
-    if (selectedIds.size === visible.length && visible.length > 0) {
+    
+    if (selectedIds.size === filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50).length && filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50).length > 0) {
       setSelectedIds(new Set());
     } else {
       setSelectedIds(new Set(visible.map(p => p.id)));
@@ -210,7 +212,7 @@ function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSea
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {filteredPersonas.slice(0, 50).map(p => (
+                  {visible.map(p => (
                     <tr key={p.id} className={`hover:bg-gray-50 transition-colors ${selectedIds.has(p.id) ? 'bg-blue-50' : ''}`}>
                       <td className="px-4 py-3">
                         <input
@@ -270,9 +272,31 @@ function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSea
                   ))}
                 </tbody>
               </table>
-              {filteredPersonas.length > 50 && (
-                <p className="text-center text-gray-400 text-sm p-4">Mostrando 50 de {filteredPersonas.length} resultados</p>
-              )}
+              {/* Paginación */}
+<div className="flex items-center justify-between px-6 py-4 border-t">
+  <div className="text-sm text-gray-600">
+    Mostrando {((currentPage - 1) * 50) + 1} - {Math.min(currentPage * 50, filteredPersonas.length)} de {filteredPersonas.length}
+  </div>
+  <div className="flex gap-2">
+    <button
+      onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+      disabled={currentPage === 1}
+      className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200"
+    >
+      ← Anterior
+    </button>
+    <span className="px-4 py-2 text-gray-700">
+      Página {currentPage} de {Math.ceil(filteredPersonas.length / 50)}
+    </span>
+    <button
+      onClick={() => setCurrentPage(p => Math.min(Math.ceil(filteredPersonas.length / 50), p + 1))}
+      disabled={currentPage >= Math.ceil(filteredPersonas.length / 50)}
+      className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200"
+    >
+      Siguiente →
+    </button>
+  </div>
+</div>
             </div>
           </div>
         </div>
@@ -1157,6 +1181,7 @@ export default function AdminDashboard() {
   const [showPersonaModal, setShowPersonaModal] = useState(false);
   const [currentView, setCurrentView] = useState('dashboard');
   const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showImportModal, setShowImportModal] = useState(false);
 
