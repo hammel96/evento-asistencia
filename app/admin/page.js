@@ -2,7 +2,6 @@
 import { db } from '@/lib/firebase';
 import { useState, useEffect, useRef } from 'react';
 import { collection, getDocs, addDoc, deleteDoc, doc, query, orderBy, Timestamp, where, updateDoc } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
@@ -1178,26 +1177,11 @@ function ImportCSVModal({ show, onClose, onImport }) {
 
 // Componente Principal
 export default function AdminDashboard() {
-  export default function AdminDashboard() {
+  
   const router = useRouter();
   const [authChecked, setAuthChecked] = useState(false);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        router.push('/login');
-      } else {
-        setAuthChecked(true);
-      }
-    });
-    return () => unsubscribe();
-  }, [router]);
 
-  if (!authChecked) {
-    return <div className="min-h-screen flex items-center justify-center">Verificando...</div>;
-  }
-
-  // ... resto del código
   const [personas, setPersonas] = useState([]);
   const [eventos, setEventos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -1208,6 +1192,7 @@ export default function AdminDashboard() {
   const [currentPage, setCurrentPage] = useState(1);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showImportModal, setShowImportModal] = useState(false);
+  
 
   const [eventoForm, setEventoForm] = useState({ nombre: '', fecha: '' });
   const [personaForm, setPersonaForm] = useState({
@@ -1224,8 +1209,26 @@ export default function AdminDashboard() {
   });
 
   useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        router.push('/login');
+      } else {
+        setAuthChecked(true);
+      }
+    });
+    return () => unsubscribe();
+  }, [router]);
+
+    useEffect(() => {
     loadData();
   }, []);
+
+  if (!authChecked) {
+    return <div className="min-h-screen flex items-center justify-center">Verificando...</div>;
+  }
+
+
+
 
   async function loadData() {
     try {
@@ -1557,11 +1560,11 @@ async function generarQRTodos() {
           </button>
           <button
       onClick={() => {
-        setActiveView('registro');
+        setCurrentView('registro');
         if (window.innerWidth < 1024) setSidebarOpen(false);
       }}
       className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-        activeView === 'registro'
+        currentView === 'registro'
           ? 'bg-[#4997d0] text-white'
           : 'text-gray-300 hover:bg-[#4997d0] hover:text-white'
       }`}
