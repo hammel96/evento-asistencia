@@ -7,7 +7,7 @@ import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 
 // Componente Dashboard
-function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSearchTerm, setShowEventModal, setShowPersonaModal, deleteEvento, generarYDescargarQR, generarQRTodos, sendQR, setShowImportModal }) {
+function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSearchTerm, setShowEventModal, setShowPersonaModal, deleteEvento, generarYDescargarQR, generarQRTodos, sendQR, setShowImportModal, handleEditPersona, handleDeletePersona }) {
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [sendingIds, setSendingIds] = useState(new Set());
   const [currentPage, setCurrentPage] = useState(1);
@@ -167,7 +167,7 @@ const visible = filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50)
                 )}
                 <button
                   onClick={() => setShowImportModal(true)}
-                  className="bg-white bg-opacity-20 text-white px-3 py-2 rounded-lg font-medium hover:bg-opacity-30 transition-colors flex items-center gap-2 text-sm"
+                  className="px-6 py-2 bg-white text-[#004370] border border-gray-100 rounded-lg hover:bg-gray-50 font-regular flex items-center gap-2 text-sm"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
@@ -192,7 +192,7 @@ const visible = filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50)
                 placeholder="Buscar por nombre o código..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+                className="w-full px-4 py-2 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4997d0]"
               />
             </div>
 
@@ -268,6 +268,25 @@ const visible = filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50)
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                           </button>
+                                                    <button
+                            onClick={() => handleEditPersona(p)}
+                            className="p-1.5 hover:bg-blue-100 rounded-md transition-colors"
+                            title="Editar"
+                          >
+                            <svg className="w-4 h-4 text-[#4997d0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                          </button>
+                          <button
+                            onClick={() => handleDeletePersona(p.id)}
+                            className="p-1.5 hover:bg-red-100 rounded-md transition-colors"
+                            title="Eliminar"
+                          >
+                            <svg className="w-4 h-4 text-[#d8222d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                          </button>
+                          
                           <div className={`w-2 h-2 rounded-full flex-shrink-0 ${p.activo ? 'bg-green-500' : 'bg-gray-300'}`} title={p.activo ? 'Activo' : 'Inactivo'} />
                         </div>
                       </td>
@@ -699,7 +718,9 @@ function ReportesView({ eventos, todasPersonas }) {
   function formatTimestamp(ts) {
     if (!ts) return '-';
     const date = ts.toDate ? ts.toDate() : new Date(ts.seconds * 1000);
-    return date.toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' });
+    const fecha = date.toLocaleDateString('es-GT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    const hora = date.toLocaleTimeString('es-GT', { hour: '2-digit', minute: '2-digit' });
+    return `${fecha} ${hora}`;
   }
 
   function exportarCSV() {
@@ -716,7 +737,7 @@ function ReportesView({ eventos, todasPersonas }) {
         formatTimestamp(p.asistencia?.timestamp),
         p.asistencia?.metodo_registro === 'qr' ? 'QR' : 'Texto'
       ]);
-      csv = BOM + ['Código,Nombre,Departamento,Manager,Hora de Registro,Método', ...rows.map(r => r.join(','))].join('\n');
+      csv = BOM + ['Código,Nombre,Departamento,Manager,Fecha y Hora de Registro,Método', ...rows.map(r => r.join(','))].join('\n');
       filename = `Asistentes_${eventoNombre}.csv`;
     } else {
       const rows = ausentesLista.map(p => [
@@ -877,7 +898,7 @@ function ReportesView({ eventos, todasPersonas }) {
                             <th className="px-4 py-3 text-left">Nombre</th>
                             <th className="px-4 py-3 text-left">Departamento</th>
                             <th className="px-4 py-3 text-left">Manager</th>
-                            <th className="px-4 py-3 text-left">Hora</th>
+                            <th className="px-4 py-3 text-left">Fecha y Hora</th>
                             <th className="px-4 py-3 text-left">Método</th>
                           </tr>
                         </thead>
@@ -1187,6 +1208,7 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [showEventModal, setShowEventModal] = useState(false);
   const [showPersonaModal, setShowPersonaModal] = useState(false);
+  const [editingPersonaId, setEditingPersonaId] = useState(null);
   const [currentView, setCurrentView] = useState('dashboard');
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -1356,50 +1378,88 @@ export default function AdminDashboard() {
     return { created: createdPersonas.length, emailsSent, emailsFailed };
   }
 
-  async function createPersona(e) {
-    e.preventDefault();
-    try {
-      const codigo = parseInt(personaForm.codigo_empleado);
-      const docRef = await addDoc(collection(db, 'personas'), {
-        codigo_empleado: codigo,
-        nombres: personaForm.nombres,
-        apellidos: personaForm.apellidos,
-        correo_electronico: personaForm.correo_electronico,
-        qr_code: parseInt(personaForm.qr_code) || codigo,
-        activo: personaForm.activo,
-        department: personaForm.department,
-        manager: personaForm.manager,
-        hiring_date: personaForm.hiring_date,
-      });
+async function createPersona(e) {
+  e.preventDefault();
+  try {
+    const codigo = parseInt(personaForm.codigo_empleado);
+    const personaData = {
+      codigo_empleado: codigo,
+      nombres: personaForm.nombres,
+      apellidos: personaForm.apellidos,
+      correo_electronico: personaForm.correo_electronico,
+      qr_code: parseInt(personaForm.qr_code) || codigo,
+      activo: personaForm.activo,
+      department: personaForm.department,
+      manager: personaForm.manager,
+      hiring_date: personaForm.hiring_date,
+    };
+
+    if (editingPersonaId) {
+      // EDITAR persona existente
+      await updateDoc(doc(db, 'personas', editingPersonaId), personaData);
+      alert('✅ Persona actualizada exitosamente');
+    } else {
+      // CREAR nueva persona
+      const docRef = await addDoc(collection(db, 'personas'), personaData);
       const enviarQR = personaForm.enviarQR;
-      setPersonaForm({
-        codigo_empleado: '',
-        nombres: '',
-        apellidos: '',
-        correo_electronico: '',
-        qr_code: '',
-        activo: true,
-        department: '',
-        manager: '',
-        hiring_date: '',
-        enviarQR: false,
-      });
-      setShowPersonaModal(false);
-      await loadData();
+      
       if (enviarQR) {
+        await loadData();
         const nuevaPersona = personas.find(p => p.id === docRef.id) || {
           id: docRef.id,
-          codigo_empleado: codigo,
-          nombres: personaForm.nombres,
-          apellidos: personaForm.apellidos,
-          correo_electronico: personaForm.correo_electronico,
-          qr_code: parseInt(personaForm.qr_code) || codigo,
+          ...personaData,
         };
         await sendQR([nuevaPersona]);
       }
+    }
+
+    setPersonaForm({
+      codigo_empleado: '',
+      nombres: '',
+      apellidos: '',
+      correo_electronico: '',
+      qr_code: '',
+      activo: true,
+      department: '',
+      manager: '',
+      hiring_date: '',
+      enviarQR: false,
+    });
+    setEditingPersonaId(null);
+    setShowPersonaModal(false);
+    await loadData();
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error al guardar persona');
+  }
+}
+
+  async function handleEditPersona(persona) {
+    setPersonaForm({
+      codigo_empleado: persona.codigo_empleado?.toString() || '',
+      nombres: persona.nombres || '',
+      apellidos: persona.apellidos || '',
+      correo_electronico: persona.correo_electronico || '',
+      qr_code: persona.qr_code?.toString() || '',
+      activo: persona.activo ?? true,
+      department: persona.department || '',
+      manager: persona.manager || '',
+      hiring_date: persona.hiring_date || '',
+      enviarQR: false,
+    });
+    setEditingPersonaId(persona.id);
+    setShowPersonaModal(true);
+  }
+
+  async function handleDeletePersona(id) {
+    if (!confirm('¿Estás seguro de eliminar esta persona? Esta acción no se puede deshacer.')) return;
+    try {
+      await deleteDoc(doc(db, 'personas', id));
+      await loadData();
+      alert('✅ Persona eliminada exitosamente');
     } catch (error) {
-      console.error('Error:', error);
-      alert('Error al crear persona');
+      console.error('Error eliminando persona:', error);
+      alert('❌ Error al eliminar persona');
     }
   }
 
@@ -1609,6 +1669,8 @@ async function generarQRTodos() {
             generarQRTodos={generarQRTodos}
             sendQR={sendQR}
             setShowImportModal={setShowImportModal}
+            handleEditPersona={handleEditPersona}
+            handleDeletePersona={handleDeletePersona}
           />
         )}
         {currentView === 'registro' && <RegistroView eventos={eventos} />}
