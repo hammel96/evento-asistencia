@@ -11,7 +11,34 @@ function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSea
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [sendingIds, setSendingIds] = useState(new Set());
   const [currentPage, setCurrentPage] = useState(1);
-const visible = filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50);
+  const [sortCol, setSortCol] = useState(null);
+  const [sortDir, setSortDir] = useState('asc');
+
+  function handleSort(col) {
+    if (sortCol === col) {
+      if (sortDir === 'asc') setSortDir('desc');
+      else { setSortCol(null); setSortDir('asc'); }
+    } else {
+      setSortCol(col);
+      setSortDir('asc');
+    }
+    setCurrentPage(1);
+  }
+
+  const sortedPersonas = sortCol ? [...filteredPersonas].sort((a, b) => {
+    let cmp = 0;
+    if (sortCol === 'codigo') {
+      cmp = (a.codigo_empleado ?? 0) - (b.codigo_empleado ?? 0);
+    } else if (sortCol === 'nombre') {
+      cmp = `${a.nombres} ${a.apellidos}`.localeCompare(`${b.nombres} ${b.apellidos}`, 'es');
+    } else if (sortCol === 'email') {
+      if (a.qr_enviado !== b.qr_enviado) cmp = a.qr_enviado ? -1 : 1;
+      else cmp = (b.fecha_envio?.seconds ?? 0) - (a.fecha_envio?.seconds ?? 0);
+    }
+    return sortDir === 'asc' ? cmp : -cmp;
+  }) : filteredPersonas;
+
+  const visible = sortedPersonas.slice((currentPage - 1) * 50, currentPage * 50);
 
   function toggleSelect(id) {
     setSelectedIds(prev => {
@@ -22,8 +49,7 @@ const visible = filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50)
   }
 
   function toggleSelectAll() {
-    
-    if (selectedIds.size === filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50).length && filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50).length > 0) {
+    if (selectedIds.size === visible.length && visible.length > 0) {
       setSelectedIds(new Set());
     } else {
       setSelectedIds(new Set(visible.map(p => p.id)));
@@ -208,9 +234,19 @@ const visible = filteredPersonas.slice((currentPage - 1) * 50, currentPage * 50)
                         className="w-4 h-4 rounded text-[#004370] border-gray-300 focus:ring-[#4997d0]"
                       />
                     </th>
-                    <th className="px-4 py-3 text-left text-gray-500 text-xs uppercase tracking-wide font-semibold">Código</th>
-                    <th className="px-4 py-3 text-left text-gray-500 text-xs uppercase tracking-wide font-semibold">Nombre</th>
-                    <th className="px-4 py-3 text-left text-gray-500 text-xs uppercase tracking-wide font-semibold">Estado Email</th>
+                    {[['codigo', 'Código'], ['nombre', 'Nombre'], ['email', 'Estado Email']].map(([col, label]) => (
+                      <th key={col} className="px-4 py-3 text-left">
+                        <button
+                          onClick={() => handleSort(col)}
+                          className="flex items-center gap-1 text-gray-500 text-xs uppercase tracking-wide font-semibold hover:text-[#004370] transition-colors select-none"
+                        >
+                          {label}
+                          <span className="text-[10px] leading-none">
+                            {sortCol === col ? (sortDir === 'asc' ? '▲' : '▼') : <span className="text-gray-300">⇅</span>}
+                          </span>
+                        </button>
+                      </th>
+                    ))}
                     <th className="px-4 py-3 text-left text-gray-500 text-xs uppercase tracking-wide font-semibold">Acciones</th>
                   </tr>
                 </thead>
