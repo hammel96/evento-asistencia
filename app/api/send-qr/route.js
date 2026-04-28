@@ -30,6 +30,7 @@ async function generateQRBase64(value) {
 
 async function sendEmailWithQR(token, senderEmail, persona, qrBase64) {
   const nombre = `${persona.nombres} ${persona.apellidos}`;
+  console.log('📨 Enviando a:', persona.correo_electronico, 'CC:', persona.correo_personal);
   const message = {
     subject: 'Tu código QR de asistencia - Icon BPO',
     body: {
@@ -62,9 +63,12 @@ async function sendEmailWithQR(token, senderEmail, persona, qrBase64) {
         </div>
       `,
     },
-    toRecipients: [
-      { emailAddress: { address: persona.correo_electronico, name: nombre } },
-    ],
+toRecipients: [
+  { emailAddress: { address: persona.correo_electronico, name: nombre } },
+],
+ccRecipients: persona.correo_personal && persona.correo_personal.trim() 
+  ? [{ emailAddress: { address: persona.correo_personal, name: nombre } }]
+  : undefined,
     attachments: [
       {
         '@odata.type': '#microsoft.graph.fileAttachment',
@@ -91,6 +95,7 @@ async function sendEmailWithQR(token, senderEmail, persona, qrBase64) {
 
   if (!res.ok) {
     const err = await res.text();
+    console.error('❌ Graph API error:', res.status, err); 
     throw new Error(`Graph API ${res.status}: ${err}`);
   }
 }
@@ -98,11 +103,13 @@ async function sendEmailWithQR(token, senderEmail, persona, qrBase64) {
 export async function POST(request) {
   try {
     const { personas } = await request.json();
+    console.log('📧 Intentando enviar a:', personas); 
     if (!personas?.length) {
       return Response.json({ error: 'No personas provided' }, { status: 400 });
     }
 
     const senderEmail = process.env.AZURE_SENDER_EMAIL;
+    console.log('👤 Sender email:', senderEmail); 
     if (!senderEmail) {
       return Response.json({ error: 'AZURE_SENDER_EMAIL not configured' }, { status: 500 });
     }
@@ -117,6 +124,7 @@ export async function POST(request) {
         await sendEmailWithQR(token, senderEmail, persona, qrBase64);
         results.push({ id: persona.id, success: true });
       } catch (err) {
+        console.error('❌ Error enviando a:', persona.correo_electronico, err);
         results.push({ id: persona.id, success: false, error: err.message });
       }
     }

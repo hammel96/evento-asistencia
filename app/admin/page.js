@@ -7,7 +7,7 @@ import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 
 // Componente Dashboard
-function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSearchTerm, setShowEventModal, setShowPersonaModal, deleteEvento, generarYDescargarQR, generarQRTodos, sendQR, setShowImportModal, handleEditPersona, handleDeletePersona }) {
+function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSearchTerm, setShowEventModal, setShowPersonaModal, deleteEvento, generarYDescargarQR, generarQRTodos, sendQR, setShowImportModal, setShowUpdateEmailsModal, handleEditPersona, handleDeletePersona }) {
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [sendingIds, setSendingIds] = useState(new Set());
   const [currentPage, setCurrentPage] = useState(1);
@@ -199,6 +199,15 @@ function DashboardView({ personas, eventos, filteredPersonas, searchTerm, setSea
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                   </svg>
                   Importar CSV
+                </button>
+                <button
+                  onClick={() => setShowUpdateEmailsModal(true)}
+                  className="px-3 py-2 bg-white text-[#004370] border border-gray-100 rounded-lg hover:bg-gray-50 font-regular flex items-center gap-2 text-sm"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Correos Personales
                 </button>
                 <button onClick={() => generarQRTodos()} className="bg-white text-[#004370] px-3 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center gap-2 text-sm">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1000,6 +1009,181 @@ function ReportesView({ eventos, todasPersonas }) {
   );
 }
 
+// Modal Actualización Masiva de Correos Personales
+function UpdateEmailsModal({ show, onClose, onUpdate }) {
+  const [file, setFile] = useState(null);
+  const [preview, setPreview] = useState([]);
+  const [updating, setUpdating] = useState(false);
+  const [error, setError] = useState('');
+  const [result, setResult] = useState(null);
+
+  function parseCSVLine(line) {
+    const res = [];
+    let cur = '';
+    let inQ = false;
+    for (const ch of line) {
+      if (ch === '"') inQ = !inQ;
+      else if (ch === ',' && !inQ) { res.push(cur); cur = ''; }
+      else cur += ch;
+    }
+    res.push(cur);
+    return res;
+  }
+
+  function parseCSV(text) {
+    const lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n').filter(l => l.trim());
+    if (lines.length < 2) return [];
+    const headers = parseCSVLine(lines[0]).map(h => h.trim().replace(/"/g, ''));
+    return lines.slice(1).map(line => {
+      const vals = parseCSVLine(line);
+      return Object.fromEntries(headers.map((h, i) => [h, (vals[i] || '').trim().replace(/"/g, '')]));
+    }).filter(row => row.codigo_empleado);
+  }
+
+  function downloadPlantilla() {
+    const BOM = '\uFEFF';
+    const csv = BOM + ['codigo_empleado,correo_personal', '12345,juan.perez@gmail.com'].join('\n');
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
+    link.download = 'plantilla_correos_personales.csv';
+    link.click();
+  }
+
+  function handleFileChange(e) {
+    const f = e.target.files[0];
+    if (!f) return;
+    setFile(f);
+    setError('');
+    setResult(null);
+    const reader = new FileReader();
+    reader.onload = evt => {
+      const rows = parseCSV(evt.target.result);
+      if (rows.length === 0) { setError('No se encontraron datos en el archivo'); return; }
+      setPreview(rows.slice(0, 5));
+    };
+    reader.readAsText(f, 'utf-8');
+  }
+
+  async function handleUpdate() {
+    if (!file || updating) return;
+    setUpdating(true);
+    setError('');
+    const reader = new FileReader();
+    reader.onload = async evt => {
+      const rows = parseCSV(evt.target.result);
+      const res = await onUpdate(rows);
+      setResult(res);
+      setUpdating(false);
+    };
+    reader.readAsText(file, 'utf-8');
+  }
+
+  function handleClose() {
+    setFile(null);
+    setPreview([]);
+    setError('');
+    setResult(null);
+    onClose();
+  }
+
+  if (!show) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-xl max-w-lg w-full shadow-2xl max-h-[90vh] flex flex-col">
+        <div className="bg-gradient-to-r from-[#004370] to-[#4997d0] p-6 rounded-t-xl flex items-center justify-between flex-shrink-0">
+          <h3 className="text-xl font-bold text-white">Actualizar Correos Personales</h3>
+          <button onClick={handleClose} className="text-white hover:text-gray-300">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="p-6 overflow-y-auto space-y-5">
+          {result ? (
+            <div className="text-center py-8">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold text-[#004370] mb-2">¡Actualización completada!</h4>
+              <p className="text-green-700 font-medium">{result.updated} actualizados</p>
+              {result.notFound > 0 && <p className="text-yellow-600 mt-1">{result.notFound} códigos no encontrados</p>}
+              <button onClick={handleClose} className="mt-6 px-6 py-2 bg-[#004370] text-white rounded-lg hover:bg-[#4997d0] transition-colors">
+                Cerrar
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="border-2 border-dashed border-[#4997d0] border-opacity-40 rounded-xl p-5 bg-blue-50 bg-opacity-30">
+                <p className="font-semibold text-[#004370] text-sm mb-1">Formato requerido</p>
+                <p className="text-gray-500 text-xs mb-3">CSV con columnas: <code className="bg-gray-100 px-1 rounded">codigo_empleado</code> y <code className="bg-gray-100 px-1 rounded">correo_personal</code></p>
+                <button onClick={downloadPlantilla} className="flex items-center gap-2 bg-[#004370] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#4997d0] transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Descargar Plantilla
+                </button>
+              </div>
+
+              <div>
+                <label className="flex items-center gap-3 border-2 border-gray-300 rounded-xl p-4 cursor-pointer hover:border-[#4997d0] transition-colors">
+                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                  </svg>
+                  <div className="flex-1 min-w-0">
+                    {file ? <p className="text-[#004370] font-medium truncate">{file.name}</p> : <p className="text-gray-400">Seleccionar archivo .csv</p>}
+                  </div>
+                  <input type="file" accept=".csv,text/csv" onChange={handleFileChange} className="hidden" />
+                </label>
+              </div>
+
+              {preview.length > 0 && (
+                <div className="overflow-x-auto border border-gray-200 rounded-lg">
+                  <table className="w-full text-xs">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-3 py-2 text-left text-gray-500 font-semibold uppercase">codigo_empleado</th>
+                        <th className="px-3 py-2 text-left text-gray-500 font-semibold uppercase">correo_personal</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      {preview.map((row, i) => (
+                        <tr key={i}>
+                          <td className="px-3 py-2 text-gray-700">{row.codigo_empleado}</td>
+                          <td className="px-3 py-2 text-gray-700">{row.correo_personal || '-'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {error && <p className="text-[#d8222d] text-sm bg-red-50 p-3 rounded-lg">{error}</p>}
+
+              <div className="flex gap-3 pt-2">
+                <button onClick={handleClose} className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium">
+                  Cancelar
+                </button>
+                <button
+                  onClick={handleUpdate}
+                  disabled={!file || preview.length === 0 || updating}
+                  className="flex-1 px-4 py-2.5 bg-[#004370] text-white rounded-lg hover:bg-[#4997d0] transition-colors font-medium disabled:opacity-50 flex items-center justify-center gap-2"
+                >
+                  {updating && <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />}
+                  {updating ? 'Actualizando...' : 'Actualizar'}
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Componente Importar CSV
 function ImportCSVModal({ show, onClose, onImport }) {
   const [file, setFile] = useState(null);
@@ -1012,8 +1196,8 @@ function ImportCSVModal({ show, onClose, onImport }) {
   function downloadPlantilla() {
     const BOM = '\uFEFF';
     const csv = BOM + [
-      'codigo_empleado,nombres,apellidos,correo_electronico,department,manager,hiring_date',
-      '12345,Juan,Perez,juan.perez@empresa.com,Tecnología,Maria Garcia,2024-01-15',
+      'codigo_empleado,nombres,apellidos,correo_electronico,correo_personal,department,manager,hiring_date',
+      '12345,Juan,Perez,juan.perez@empresa.com,juan.perez@gmail.com,Tecnología,Maria Garcia,2024-01-15',
     ].join('\n');
     const link = document.createElement('a');
     link.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
@@ -1258,6 +1442,7 @@ export default function AdminDashboard() {
     nombres: '',
     apellidos: '',
     correo_electronico: '',
+    correo_personal: '',
     qr_code: '',
     activo: true,
     department: '',
@@ -1265,6 +1450,7 @@ export default function AdminDashboard() {
     hiring_date: '',
     enviarQR: false
   });
+  const [showUpdateEmailsModal, setShowUpdateEmailsModal] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -1367,6 +1553,7 @@ export default function AdminDashboard() {
           nombres: row.nombres || '',
           apellidos: row.apellidos || '',
           correo_electronico: row.correo_electronico || '',
+          correo_personal: row.correo_personal || '',
           qr_code: codigo,
           activo: true,
           department: row.department || '',
@@ -1423,6 +1610,7 @@ async function createPersona(e) {
       nombres: personaForm.nombres,
       apellidos: personaForm.apellidos,
       correo_electronico: personaForm.correo_electronico,
+      correo_personal: personaForm.correo_personal,
       qr_code: parseInt(personaForm.qr_code) || codigo,
       activo: personaForm.activo,
       department: personaForm.department,
@@ -1454,6 +1642,7 @@ async function createPersona(e) {
       nombres: '',
       apellidos: '',
       correo_electronico: '',
+      correo_personal: '',
       qr_code: '',
       activo: true,
       department: '',
@@ -1476,6 +1665,7 @@ async function createPersona(e) {
       nombres: persona.nombres || '',
       apellidos: persona.apellidos || '',
       correo_electronico: persona.correo_electronico || '',
+      correo_personal: persona.correo_personal || '',
       qr_code: persona.qr_code?.toString() || '',
       activo: persona.activo ?? true,
       department: persona.department || '',
@@ -1497,6 +1687,25 @@ async function createPersona(e) {
       console.error('Error eliminando persona:', error);
       alert('❌ Error al eliminar persona');
     }
+  }
+
+  async function updatePersonalEmails(rows) {
+    let updated = 0;
+    let notFound = 0;
+    for (const row of rows) {
+      const codigo = parseInt(row.codigo_empleado);
+      const persona = personas.find(p => p.codigo_empleado === codigo);
+      if (!persona) { notFound++; continue; }
+      try {
+        await updateDoc(doc(db, 'personas', persona.id), { correo_personal: row.correo_personal || '' });
+        updated++;
+      } catch (err) {
+        console.error('Error actualizando correo personal:', err);
+        notFound++;
+      }
+    }
+    await loadData();
+    return { updated, notFound };
   }
 
   const filteredPersonas = personas.filter(p => 
@@ -1705,6 +1914,7 @@ async function generarQRTodos() {
             generarQRTodos={generarQRTodos}
             sendQR={sendQR}
             setShowImportModal={setShowImportModal}
+            setShowUpdateEmailsModal={setShowUpdateEmailsModal}
             handleEditPersona={handleEditPersona}
             handleDeletePersona={handleDeletePersona}
           />
@@ -1717,6 +1927,12 @@ async function generarQRTodos() {
         show={showImportModal}
         onClose={() => setShowImportModal(false)}
         onImport={importPersonas}
+      />
+
+      <UpdateEmailsModal
+        show={showUpdateEmailsModal}
+        onClose={() => setShowUpdateEmailsModal(false)}
+        onUpdate={updatePersonalEmails}
       />
 
       {showEventModal && (
@@ -1771,7 +1987,7 @@ async function generarQRTodos() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto">
           <div className="bg-white rounded-xl max-w-2xl w-full shadow-2xl my-8">
             <div className="bg-gradient-to-r from-[#004370] to-[#4997d0] p-6 rounded-t-xl">
-              <h3 className="text-xl font-bold text-white">Agregar Nueva Persona</h3>
+              <h3 className="text-xl font-bold text-white">{editingPersonaId ? 'Editar Persona' : 'Agregar Nueva Persona'}</h3>
             </div>
             <form onSubmit={createPersona} className="p-6 space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1815,14 +2031,24 @@ async function generarQRTodos() {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4997d0] focus:border-transparent text-gray-900"
                   />
                 </div>
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email*</label>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico*</label>
                   <input
                     type="email"
                     required
                     value={personaForm.correo_electronico}
                     onChange={(e) => setPersonaForm({...personaForm, correo_electronico: e.target.value})}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4997d0] focus:border-transparent text-gray-900"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Correo Personal</label>
+                  <input
+                    type="email"
+                    value={personaForm.correo_personal}
+                    onChange={(e) => setPersonaForm({...personaForm, correo_personal: e.target.value})}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4997d0] focus:border-transparent text-gray-900"
+                    placeholder="gmail, hotmail, etc."
                   />
                 </div>
                 <div>
@@ -1887,7 +2113,7 @@ async function generarQRTodos() {
                   type="submit"
                   className="flex-1 px-4 py-2 bg-[#004370] text-white rounded-lg hover:bg-[#4997d0] transition-colors"
                 >
-                  Agregar Persona
+                  {editingPersonaId ? 'Guardar Cambios' : 'Agregar Persona'}
                 </button>
               </div>
             </form>
