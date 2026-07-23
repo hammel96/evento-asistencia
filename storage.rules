@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Los uploads de excusas ahora los hace exclusivamente app/api/excusas
+    // con Admin SDK (lib/firebase-admin.js), que ignora estas reglas por
+    // completo — no necesita ningún "allow" aquí para funcionar. La
+    // visualización en Reportes usa la URL con token que ese mismo endpoint
+    // genera (firebaseStorageDownloadTokens), que tampoco depende de estas
+    // reglas: se valida por posesión del token, no por Storage Rules.
+    //
+    // Por eso el bucket queda completamente cerrado a cualquier acceso vía
+    // SDK cliente (autenticado o no) — nada del código lo necesita.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

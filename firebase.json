@@ -1,0 +1,9 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "storage": {
+    "bucket": "evento-asistencia.firebasestorage.app",
+    "rules": "storage.rules"
+  }
+}

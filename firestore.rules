@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // El formulario público de excusas (/excusa/[eventoId]) ya no lee ni
+    // escribe Firestore directamente desde el cliente — todo pasa por
+    // app/api/excusas, app/api/personas/[codigo] y app/api/eventos/[eventoId]
+    // usando el Admin SDK (lib/firebase-admin.js), que ignora estas reglas
+    // por completo. Por eso ya no quedan reglas públicas aquí: eventos,
+    // personas_publico y excusas volvieron a depender únicamente del
+    // catch-all de abajo, igual que el resto de la app.
+    //
+    // personas_publico dejó de usarse (era el mecanismo para permitir el
+    // lookup público sin exponer personas; ahora ese lookup lo hace el
+    // servidor directo contra personas). Los documentos viejos siguen
+    // existiendo en Firestore pero no se leen ni escriben desde ningún
+    // lado del código.
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
