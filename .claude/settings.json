@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log *)",
+      "Bash(timeout 20 git log --all --oneline -i --grep=\"excusa\")",
+      "Bash(timeout 20 git log --all --diff-filter=A --name-only --oneline)",
+      "Bash(npx --no-install firebase --version)"
+    ]
+  }
+}
