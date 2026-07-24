@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["http://localhost:3000"],
+    "origin": ["http://localhost:3000", "https://attendance.iconbpo.com"],
     "method": ["GET", "POST", "PUT", "DELETE"],
     "maxAgeSeconds": 3600,
     "responseHeader": ["Content-Type", "Authorization", "Content-Length", "x-goog-resumable"]

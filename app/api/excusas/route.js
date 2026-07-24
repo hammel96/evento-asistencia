@@ -2,21 +2,18 @@ import { adminDb, adminStorage } from '@/lib/firebase-admin';
 import { FieldValue } from 'firebase-admin/firestore';
 import { randomUUID } from 'crypto';
 
-const TIPOS_PERMITIDOS = ['application/pdf', 'image/jpeg', 'image/png'];
-const EXTENSIONES_PERMITIDAS = ['.pdf', '.jpg', '.jpeg', '.png'];
-const TAMANO_MAXIMO = 10 * 1024 * 1024; // 10MB
 const RAZONES_VALIDAS = ['estudios', 'medico', 'vacaciones', 'trabajo_sabado', 'otro'];
 
 export async function POST(request) {
   try {
-    const formData = await request.formData();
-    const eventoId = formData.get('evento_id');
-    const codigoEmpleadoRaw = formData.get('codigo_empleado');
-    const razon = formData.get('razon');
-    const explicacion = formData.get('explicacion') || '';
-    const archivo = formData.get('archivo');
+    const body = await request.json();
+    const eventoId = body?.evento_id;
+    const codigoEmpleadoRaw = body?.codigo_empleado;
+    const razon = body?.razon;
+    const explicacion = body?.explicacion || '';
+    const filePathRaw = body?.filePath;
 
-    if (!eventoId || !codigoEmpleadoRaw || !razon || !archivo) {
+    if (!eventoId || !codigoEmpleadoRaw || !razon || !filePathRaw) {
       return Response.json({ error: 'Faltan campos requeridos.' }, { status: 400 });
     }
     if (!RAZONES_VALIDAS.includes(razon)) {
@@ -56,41 +53,47 @@ export async function POST(request) {
     const personaDoc = personasSnap.docs[0];
     const persona = personaDoc.data();
 
-    // 3. Validar archivo en el servidor (no confiar en el accept del input).
-    const nombreArchivo = archivo.name || 'archivo';
-    const puntoIdx = nombreArchivo.lastIndexOf('.');
-    const extension = puntoIdx >= 0 ? nombreArchivo.slice(puntoIdx).toLowerCase() : '';
-    if (!EXTENSIONES_PERMITIDAS.includes(extension) || !TIPOS_PERMITIDOS.includes(archivo.type)) {
-      return Response.json({ error: 'Archivo inválido. Solo se permiten PDF, JPG o PNG.' }, { status: 400 });
+    // 3. El archivo ya se subió directo a Storage vía la URL firmada de
+    // /api/excusas/upload-url (así se evita el límite de ~4.5MB de Vercel
+    // Functions). Nunca se confía en filePath tal cual: se exige que
+    // corresponda exactamente a este evento/código, se extrae el nombre
+    // real del archivo de la ruta misma (nunca de otro campo del body) y se
+    // confirma que el archivo exista de verdad en Storage — así nadie puede
+    // crear un documento de excusa sin haber subido nada primero.
+    const filePath = String(filePathRaw);
+    const prefijoEsperado = `excusas/${eventoId}/${codigoEmpleado}_`;
+    if (!filePath.startsWith(prefijoEsperado)) {
+      return Response.json({ error: 'Archivo inválido.' }, { status: 400 });
     }
-    if (archivo.size > TAMANO_MAXIMO) {
-      return Response.json({ error: 'El archivo supera el tamaño máximo de 10MB.' }, { status: 400 });
+    const resto = filePath.slice(prefijoEsperado.length); // "{timestamp}_{nombreArchivo}"
+    const underscoreIdx = resto.indexOf('_');
+    const nombreArchivo = underscoreIdx >= 0 ? resto.slice(underscoreIdx + 1) : '';
+    if (!nombreArchivo) {
+      return Response.json({ error: 'Archivo inválido.' }, { status: 400 });
     }
 
-    // 4. Subir a Storage con Admin SDK (ignora Storage Rules por completo).
-    const buffer = Buffer.from(await archivo.arrayBuffer());
-    const storagePath = `excusas/${eventoId}/${codigoEmpleado}_${Date.now()}_${nombreArchivo}`;
     const bucket = adminStorage.bucket();
-    const file = bucket.file(storagePath);
+    const file = bucket.file(filePath);
+    const [existe] = await file.exists();
+    if (!existe) {
+      return Response.json({ error: 'El archivo no se subió correctamente. Intenta de nuevo.' }, { status: 400 });
+    }
 
-    // 5. URL de descarga: se usa el patrón de token (firebaseStorageDownloadTokens),
+    // 4. URL de descarga: se usa el patrón de token (firebaseStorageDownloadTokens),
     // el mismo mecanismo que getDownloadURL() del SDK cliente, en vez de una URL
     // firmada (getSignedUrl) porque las URLs firmadas V4 tienen un tope duro de
     // 7 días de expiración al firmarse con una clave de service account explícita
     // — inaceptable para un archivo que Reportes debe poder mostrar indefinidamente.
     // Esta URL con token NO depende de Storage Rules (se valida por posesión del
     // token, no por evaluación de reglas), así que storage.rules puede quedar
-    // completamente cerrado sin romper la visualización en Reportes.
+    // completamente cerrado sin romper la visualización en Reportes. El token se
+    // agrega recién ahora (post-subida) porque la subida en sí ocurrió por PUT
+    // directo a la URL firmada, que no setea metadata custom de Firebase.
     const downloadToken = randomUUID();
-    await file.save(buffer, {
-      metadata: {
-        contentType: archivo.type,
-        metadata: { firebaseStorageDownloadTokens: downloadToken },
-      },
-    });
-    const archivoUrl = `https://firebasestorage.googleapis.com/v0/b/${bucket.name}/o/${encodeURIComponent(storagePath)}?alt=media&token=${downloadToken}`;
+    await file.setMetadata({ metadata: { firebaseStorageDownloadTokens: downloadToken } });
+    const archivoUrl = `https://firebasestorage.googleapis.com/v0/b/${bucket.name}/o/${encodeURIComponent(filePath)}?alt=media&token=${downloadToken}`;
 
-    // 6. Crear el documento excusas (mismos campos que antes).
+    // 5. Crear el documento excusas (mismos campos que antes).
     const docRef = await adminDb.collection('excusas').add({
       evento_id: eventoId,
       codigo_empleado: codigoEmpleado,

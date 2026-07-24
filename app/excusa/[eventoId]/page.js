@@ -138,14 +138,56 @@ export default function ExcusaPage() {
     setEnviando(true);
 
     try {
-      const formData = new FormData();
-      formData.append('evento_id', eventoId);
-      formData.append('codigo_empleado', personaEncontrada.codigo);
-      formData.append('razon', razon);
-      formData.append('explicacion', explicacion.trim());
-      formData.append('archivo', archivo);
+      // 1. Pedir una URL firmada de subida (valida evento/código/archivo en el
+      // servidor antes de autorizar nada). El archivo en sí todavía no viaja.
+      const urlRes = await fetch('/api/excusas/upload-url', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          evento_id: eventoId,
+          codigo_empleado: personaEncontrada.codigo,
+          nombre_archivo: archivo.name,
+          tipo_archivo: archivo.type,
+          tamano_archivo: archivo.size,
+        }),
+      });
+      const urlData = await urlRes.json();
 
-      const res = await fetch('/api/excusas', { method: 'POST', body: formData });
+      if (!urlRes.ok) {
+        if (urlData.code === 'FORM_CLOSED') {
+          setFormularioAbierto(false);
+        } else {
+          setErrorGeneral(urlData.error || 'Ocurrió un error al enviar tu excusa. Intenta de nuevo.');
+        }
+        setEnviando(false);
+        return;
+      }
+
+      // 2. Subir el archivo directo a Storage con la URL firmada — no pasa
+      // por esta app, así que no hay límite de ~4.5MB.
+      const subida = await fetch(urlData.uploadUrl, {
+        method: 'PUT',
+        headers: { 'Content-Type': archivo.type },
+        body: archivo,
+      });
+      if (!subida.ok) {
+        setErrorGeneral('Ocurrió un error al subir el archivo. Intenta de nuevo.');
+        setEnviando(false);
+        return;
+      }
+
+      // 3. Con el archivo ya en Storage, crear el registro de la excusa.
+      const res = await fetch('/api/excusas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          evento_id: eventoId,
+          codigo_empleado: personaEncontrada.codigo,
+          razon,
+          explicacion: explicacion.trim(),
+          filePath: urlData.filePath,
+        }),
+      });
       const data = await res.json();
 
       if (!res.ok) {
